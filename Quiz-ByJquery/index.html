@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Quiz</title>
+<style>
+	*{
+		margin: 0px;
+		padding: 0px;
+	}
+	body{
+		background-image: url("Quiz.jpg");
+		background-size: cover;
+		position: center;
+		width: 100%;
+  		height: 98vh;
+
+	}
+	#wrapper{
+		display: flex;
+  		flex-direction: column;
+  		justify-content: center;
+  		align-items: center;
+  		text-align: center;
+  		flex-basis: 80%;
+  		height: 98vh;
+	}
+
+
+	h1{
+		text-align: center;
+		text-shadow: 2px 2px 2px red;
+		font-style: italic;
+		font-size: 30px;
+		margin-top: 0px;
+		color: #fff700;
+	}
+	.Quizresult,.finish, #container{
+		display: none;
+		text-align: center;
+	}
+	.question{
+		text-align: center;
+		font-weight: bold;
+		font-style: italic;
+		font-size: 20px;
+		margin-top: 16px;
+		padding: 0;
+		color: #0c26ed;
+		text-shadow: 0px 0px 1px yellow;
+		flex-basis: 50%;
+
+	}
+	.answer{
+		align-items: center;
+		text-align: left;
+		padding-left: 30px;
+		width:80%; 
+		height: 27px; 
+		margin-top: 20px; 
+		font-size: 16px;
+		color: white;  
+		border: none; 
+		cursor: pointer; 
+		border-radius: 9px;
+		box-shadow: 2px 2px 2px grey;
+		background-color: #cf0614;
+		font-weight: bold;
+		text-shadow: 1px 1px 1px black;
+		
+	}
+	.start{
+		align-items: center;
+		width: 100px; 
+		height: 30px;
+		color: white; 
+		border: none; 
+		cursor: pointer; 
+		border-radius: 9px;
+		box-shadow: 2px 2px 2px gray;
+		margin-top: 30px;
+		text-align: center;
+		align-items: center;
+		font-size: 17px;
+		text-decoration: bold;
+		font-weight: bold;
+		background-color: #cf0614;
+		text-shadow: 1px 1px 1px black;
+
+	}
+	.finish, .Quizresult{
+		text-align: center;
+		text-shadow: 1px 1px 1px gray;
+		font-style: italic;
+		font-size: 20px;
+		margin: 5px;
+		color: #1621fa;
+		font-weight: bold;
+
+	}
+	@media only screen and (min-width: 768px) {
+		h1{
+		font-size: 40px;
+		margin-top: 0px;
+		}
+
+		.question{
+		font-size: 25px;
+		padding-top: 30px;
+		}
+		.answer{
+		padding-left: 30px;
+		width:65%; 
+		height: 35px; 
+		margin-top: 20px; 
+		font-size: 20px;	
+		}
+		.playback, .start{
+		width: 130px; 
+		height: 40px;
+		margin-top: 30px;
+		font-size: 25px;
+		}
+		.finish, .Quizresult{
+		font-size: 25px;
+		margin-top: 15px;
+		}
+		}
+
+</style>
+</head>
+<body>
+	<div id = "wrapper" >
+	<h1>FOOTBALL QUIZ </h1>
+	<button class="start" id="start" onclick="startquiz()">Start</button>
+			<div id = "container" >
+			<div class="question" id="question"></div>
+			<button class="answer" id="answerA" onclick="checkAnswer('A')"></button>
+			<button class="answer" id="answerB" onclick="checkAnswer('B')"></button>
+			<button class="answer" id="answerC" onclick="checkAnswer('C')"></button>
+			<button class="answer" id="answerD" onclick="checkAnswer('D')"></button> <br>
+		</div>
+			<div class="finish" id = "finish">You have finished all questions</div>
+			<div class = "Quizresult" id = "Quizresult"></div>
+		</div>
+<script>
+	let quiz = [
+	{
+		question: "How many Premier League titles did Rio Ferdinand win with Manchester United?",
+		answerA: "Four",
+		answerB: "Five ",
+		answerC: "Six",
+		answerD: "Seven",
+		answertrue: "C",
+		},
+	{
+		question: "Billionaire businessman Trevor Hemmings is best known for his association with which club?",
+		answerA: "Preston North End ",
+		answerB: "West Ham United ",
+		answerC: "Swansea City",
+		answerD: "Leicester City ",
+		answertrue: "A",
+		},
+	{
+		question: "Which English club won two Inter-Cities Fairs Cups in 1968 and 1971?",
+		answerA: "Leicester City ",
+		answerB: "Sheffield Wednesday  ",
+		answerC: "Leeds United",
+		answerD: "Swansea City ",
+		answertrue: "C",
+		},
+	{
+		question: "How many minutes it take Russia to score the first goal in the opening match?",
+		answerA: "3",
+		answerB: "12",
+		answerC: "44",
+		answerD: "89",
+		answertrue: "B",
+		},
+	{
+		question: "At 45 years and 161 days, who became the oldest ever player to play in a World Cup finals match?",
+		answerA: "Essam El-Hadary",
+		answerB: "Sherif Ekramy",
+		answerC: "Mohamed El-Shenawy",
+		answerD: "Steve Mandanda",
+		answertrue: "A",
+		},
+	{
+		question: "What was the only goalless draw of the tournament?",
+		answerA: "Egypt v Uruguay",
+		answerB: "Denmark v France",
+		answerC: "Peru v Denmark",
+		answerD: "Belgium v England",
+		answertrue: "B",
+		},
+	{
+		question: "Panama and Iceland, the two debutants at the World Cup, picked up just one point between them. Against which team was it won?",
+		answerA: "Tunisia",
+		answerB: "Croatia",
+		answerC: "Argentina",
+		answerD: "Nigeria",
+		answertrue: "C",
+		},
+	{
+		question: "Which team won all three of their group games without conceding a goal?",
+		answerA: "Croatia",
+		answerB: "France",
+		answerC: "Uruguay",
+		answerD: "Belgium",
+		answertrue: "C",
+		},
+	{
+		question: "Who had a penalty rescinded during the group stage after the referee used VAR and decided that the player had just fallen over?",
+		answerA: "Cristiano Ronaldo",
+		answerB: "Neymar",
+		answerC: "Harry Kane",
+		answerD: "Lionel Messi",
+		answertrue: "B",
+		},
+	{
+		question: "Three of these players scored and missed penalties (not in shootouts). Who just missed?",
+		answerA: "Cristiano Ronaldo",
+		answerB: "Lionel Messi",
+		answerC: "Luka Modric",
+		answerD: "Fahad Al-Muwallad",
+		answertrue: "B",
+		},
+	{
+		question: "",
+		answerA: "",
+		answerB: "",
+		answerC: "",
+		answerD: "",
+		answertrue: "",
+		}
+	]
+		const Totalquiz = quiz.length;
+		let Score = 0;
+		let runquiz = 0;
+		let  Loadquestion = function(runquiz){
+			$("#question").html(quiz[runquiz].question);
+			$("#answerA").html("A" +" "+quiz[runquiz].answerA);
+			$("#answerB").html("B" +" "+quiz[runquiz].answerB);
+			$("#answerC").html("C" +" "+quiz[runquiz].answerC);
+			$("#answerD").html("D" +" "+quiz[runquiz].answerD);
+			}
+    	let nextquestion = function(){	
+    			if(runquiz<Totalquiz-1){
+    			runquiz +=1;
+    			Loadquestion(runquiz);
+    			}
+    			}
+    		let checkAnswer = function(answer){	
+    			if(answer == quiz[runquiz].answertrue){
+    			Score +=1;
+    			nextquestion();
+			} else{nextquestion();}
+    			if(runquiz == Totalquiz-1){
+    			$("#finish").show();
+			Finish();
+			}
+    		}
+    	let Finish = function(){
+    			if(Score ==Totalquiz -1){ 
+			$("#container").hide();
+    			$("#Quizresult").show();
+    			$("#Quizresult").html("Conglatulation! Your score:" +" "+ Score +"/" + (Totalquiz-1)+ " " + "question");
+    			} else {
+    			$("#container").hide();
+    			$("#Quizresult").show();
+    			$("#Quizresult").html("Your score:" +" "+ Score +"/" + (Totalquiz-1)+ " " + "question, Play again!");
+    			$("#start").show();
+				$("#start").html("Playback");
+    			runquiz=0;
+    			Score=0;
+    			}	
+    			}					
+	let startquiz = function(){
+			$("#start").hide();
+			$("#container").show();
+			Loadquestion(runquiz);
+			$("#Quizresult").hide();
+			$("#finish").hide();
+			}
+    	
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+</body>
+</html>
