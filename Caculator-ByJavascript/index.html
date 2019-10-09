@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Caculator with DOM</title>
+	<style>
+	* {
+  		padding: 0;
+  		margin: 0;
+  	}
+  	body {
+  		background-image: url("caculator1.jpg");
+  		font-family: sans-serif;
+  		color: #333;
+  		font-size: 16px;
+  		text-align: center;
+  	}
+	.container {
+		width: 400px;
+		height: auto;
+		margin: 500px auto;
+		padding: 30px;
+		border: 5px solid #666;
+		border-radius: 6px;
+		box-shadow: 8px 8px 10px gray;
+	}
+	.logo {
+		font-size: 40px;
+		font-weight: 800;
+		color: white;
+		box-shadow: 5px 8px 10px black;
+	}
+	.screen {
+		width: 100%;
+		height: 100px;
+		background-color: #f7f8f9;
+		border: 1px solid #666;
+		border-radius: 4px;
+	}
+	#calculator, #result {
+		padding: 5px 7px;
+		width: 95%;
+		height: 50%;
+		font-size: 25px; 
+		text-align: right;
+	}
+	.box-button button {
+		width: 19%; 
+		height: 40px; 
+		margin-top: 10px; 
+		font-size: 22px;
+		color: #ffff; 
+		border: none; 
+		cursor: pointer; 
+		border-radius: 6px;
+		box-shadow: 2px 2px 2px grey;
+	}
+	.number, .dot {
+		background-color: #808080;
+	}
+	.plus, .minus, .multiply, .division {
+		background-color: #f0ad4e;
+	}
+	
+	.del {
+		background-color: #d44a4a;
+	}
+	.Round, .Sin, .Cos,.Tan,.Abs,.Log,.equal, .percent, .sqrt, .square,.sqrt3, .square3, .pi {
+		background-color: #1aad64;
+	}
+	.reset{
+		background-color: #6587cf;
+	}
+	button:hover {
+		transform: scale(1.01);
+	}
+	@media only screen and (min-width: 768px) {
+		body {
+  		font-size: 16px;
+  	}
+	.container {
+		width: 400px;
+		height: auto;
+		margin: 50px auto;
+		padding: 10px;
+	}
+	.logo {
+		font-size: 40px;
+		font-weight: 800;
+	}
+	.screen {
+		width: 100%;
+		height: 100px;
+	}
+	#calculator, #result {
+		padding: 5px 7px;
+		width: 95%;
+		height: 50%;
+		font-size: 25px; 
+	}
+	.box-button button {
+		width: 19%; 
+		height: 40px; 
+		margin-top: 10px; 
+		font-size: 22px;
+	}
+	}
+	</style>
+</head>
+<body>
+	<div class='container'>
+		<div class='logo'>Caculator</div>
+		<div class='screen'>
+			<h2 id='calculator'></h2>
+			<h2 id='result'></h2>
+		</div>
+		<div class='box-button'>
+			<button class="sqrt" id ="sqrt" >&#8730;</button>
+			<button class="sqrt3" id ="sqrt3">&#179;&#8730;</button>
+			<button class="square" id ="square" >x&#178;</button>
+			<button class="square3" id ="square3">x&#179;</button>
+			<button class="del" id ="del" >Del</button>
+			<button class="Abs" id ="Abs"  >Abs</button>
+		    <button class="Log" id ="Log"  >Log</button>
+		    <button class="Sin" id ="Sin"  >Sin</button>
+		    <button class="Cos" id ="Cos"  >Cos</button>
+		    <button class="Tan" id ="Tan"  >Tan</button>
+			<button class="Round" id ="Round" >Round</button>
+			<button class="number" id ="number7" onclick="press(this)">7</button>
+		    <button class="number" id ="number8" onclick="press(this)">8</button>
+		    <button class="number" id ="number9" onclick="press(this)">9</button>
+		    <button class="operator" value="/" id ="division" onclick="getoperator('/')">&#247;</button>
+			<button class="pi" value="3.1415926" id ="pi" >&#960;</button>
+			<button class="number" id ="number4" onclick="press(this)">4</button>
+		    <button class="number" id ="number5" onclick="press(this)">5</button>
+		    <button class="number" id ="number6" onclick="press(this)">6</button>
+		    <button class="operator" value= "*" id ="multiply" onclick="getoperator('x')">x</button>
+		    <button class="percent" id ="percent"onclick="getoperator('%')">%</button>
+		    <button class="number" id ="number1" onclick="press(this)">1</button>
+		    <button class="number" id ="number2" onclick="press(this)">2</button>
+		    <button class="number" id ="number3" onclick="press(this)">3</button>
+		    <button class="operator" value="-" id ="minus" onclick="getoperator('-')">-</button>
+		    <button class="equal" id ="equal" onclick="Equal()">=</button>
+		    <button class="dot" id ="dot" onclick="press(this)">.</button>
+		    <button class="number" id ="number0" onclick="press(this)">0</button>		
+		    <button class="operator" id ="plus" onclick="getoperator('+')">+</button>
+		    <button class="reset" id ="reset">C</button>
+		</div>
+	</div>	
+<script>
+	let sqrt = document.getElementById("sqrt");
+	let sqrt3 = document.getElementById("sqrt3");
+	let square = document.getElementById("square");
+	let square3 = document.getElementById("square3");
+	let del = document.getElementById("del");
+	let abs = document.getElementById("Abs");
+	let log = document.getElementById("Log");
+	let sin = document.getElementById("Sin");
+	let cos = document.getElementById("Cos");
+	let tan = document.getElementById("Tan");
+	let round = document.getElementById("Round");
+	let number = document.querySelectorAll("button.number")
+	let division = document.getElementById("division");
+	let pi = document.getElementById("pi");
+	let reset = document.getElementById("reset");
+	let calculator = document.getElementById("calculator");
+	let result = document.getElementById("result");
+// Get number
+	let press= function(button){
+		calculator.innerHTML += button.innerHTML;
+		}
+// Get operation
+	let getoperator = function(x){
+		switch(x){
+			case("x"):
+			calculator.innerHTML += "*";
+			break;
+			case("+"):
+			calculator.innerHTML += "+";
+			break;
+			case("-"):
+			calculator.innerHTML += "-";
+			break;
+			case("/"):
+			calculator.innerHTML += "/";
+			break;
+			case("%"):
+			calculator.innerHTML += "%";
+			break;
+		}
+		}
+// Equal function
+	let clearresult = function(){
+		result.innerHTML="";
+		}
+
+	let Equal = function(){
+		clearresult();
+		result.innerHTML +=eval(calculator.innerHTML);
+		getoperator();
+		}
+// C function
+	let clearall = function(){
+		calculator.innerHTML = "";
+		result.innerHTML="";
+		}
+// Del function
+	let celearlast = function(){
+		let x = calculator.innerHTML;
+		let y = x.substring(0,x.length-1);
+		calculator.innerHTML = y;
+		} 
+// Get pinumber
+	let getpinumber = function(){
+		calculator.innerHTML += pi.value;
+		}
+// Round function
+	let Round = function(){	
+		let x = result.innerHTML;
+		if(x !=0){
+		result.innerHTML = Math.round(result.innerHTML);
+		}
+		}
+// Abs function
+	let Abs = function(){
+		let x = calculator.innerHTML;
+		if(x !=0){
+		result.innerHTML = Math.abs(calculator.innerHTML);
+		}
+		}
+// Log function
+	let Log = function(){
+		let x = calculator.innerHTML;
+		if(x !=0){
+		result.innerHTML = Math.log(calculator.innerHTML);
+		}
+		}
+// Sin function
+	let Sin = function(){
+		let x = calculator.innerHTML;
+		if(x !=0){
+		result.innerHTML = Math.sin(calculator.innerHTML);
+		}
+		}
+// Cos function
+	let Cos = function(){
+		let x = calculator.innerHTML;
+		if(x !=0){
+		result.innerHTML = Math.cos(calculator.innerHTML);
+		}
+		}
+// Tan function
+	let Tan = function(){
+		let x = calculator.innerHTML;
+		if(x !=0){
+		result.innerHTML = Math.tan(calculator.innerHTML);
+		}
+		}
+// Sqrt function
+	let Sqrt = function(){
+		let x = calculator.innerHTML;
+		if(x !=0){
+		result.innerHTML = Math.sqrt(calculator.innerHTML);
+		}
+		}
+// Sqrt3 function
+	let Sqrt3 = function(){
+		let x = calculator.innerHTML;
+		if(x !=0){
+		result.innerHTML = Math.pow(calculator.innerHTML,(1/3));
+		}
+		}
+// Square function
+	let Square = function(){
+		let x = calculator.innerHTML;
+		if(x !=0){
+		result.innerHTML = Math.pow(calculator.innerHTML,2);
+		}
+		}
+// Square3 function
+	let Square3 = function(){
+		let x = calculator.innerHTML;
+		if(x !=0){
+		result.innerHTML = Math.pow(calculator.innerHTML,3);
+		}
+		}
+// Add all function
+	reset.addEventListener("click", clearall);
+	del.addEventListener("click", celearlast);
+	pi.addEventListener("click", getpinumber);
+	round.addEventListener("click", Round);
+	abs.addEventListener("click", Abs);
+	log.addEventListener("click", Log);
+	sin.addEventListener("click", Sin);
+	cos.addEventListener("click", Cos);
+	tan.addEventListener("click", Tan);
+	sqrt.addEventListener("click", Sqrt);
+	sqrt3.addEventListener("click", Sqrt3);
+	square.addEventListener("click", Square);
+	square3.addEventListener("click", Square3);
+</script>
+</body>
+</html>
