@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Caculator with DOM</title>
+	<style>
+	* {
+  		padding: 0;
+  		margin: 0;
+  	}
+  	body {
+  		background-image: url("caculator.jpg");
+  		font-family: sans-serif;
+  		color: #333;
+  		font-size: 16px;
+  		text-align: center;
+  	}
+	.container {
+		width: 400px;
+		height: auto;
+		margin: 500px auto;
+		padding: 30px;
+		border: 5px solid #666;
+		border-radius: 6px;
+		box-shadow: 8px 8px 10px gray;
+	}
+	.logo {
+		font-size: 40px;
+		font-weight: 800;
+		color: white;
+		box-shadow: 5px 8px 10px black;
+	}
+	.screen {
+		width: 100%;
+		height: 100px;
+		background-color: #f7f8f9;
+		border: 1px solid #666;
+		border-radius: 4px;
+	}
+	#calculator, #result {
+		padding: 5px 7px;
+		width: 95%;
+		height: 50%;
+		font-size: 25px; 
+		text-align: right;
+	}
+	.box-button button {
+		width: 19%; 
+		height: 40px; 
+		margin-top: 10px; 
+		font-size: 22px;
+		color: #ffff; 
+		border: none; 
+		cursor: pointer; 
+		border-radius: 6px;
+		box-shadow: 2px 2px 2px grey;
+	}
+	.number, .dot {
+		background-color: #808080;
+	}
+	.plus, .minus, .multiply, .division {
+		background-color: #FFC21C;
+	}
+	
+	.del {
+		background-color: #d44a4a;
+	}
+	.Round, .Sin, .Cos,.Tan,.Abs,.Log,.equal, #percent, .sqrt, .square,.sqrt3, .square3, .pi {
+		background-color: #5cb85c;
+	}
+	.reset{
+		background-color: #6587cf;
+	}
+	button:hover {
+		transform: scale(1.01);
+	}
+	@media only screen and (min-width: 768px) {
+		body {
+  		font-size: 16px;
+  	}
+	.container {
+		width: 400px;
+		height: auto;
+		margin: 50px auto;
+		padding: 10px;
+	}
+	.logo {
+		font-size: 40px;
+		font-weight: 800;
+	}
+	.screen {
+		width: 100%;
+		height: 100px;
+	}
+	#calculator, #result {
+		padding: 5px 7px;
+		width: 95%;
+		height: 50%;
+		font-size: 25px; 
+	}
+	.box-button button {
+		width: 19%; 
+		height: 40px; 
+		margin-top: 10px; 
+		font-size: 22px;
+	}
+	}
+	</style>
+</head>
+<body>
+	<div class='container'>
+		<div class='logo'>Caculator</div>
+		<div class='screen'>
+			<h2 id='calculator'></h2>
+			<h2 id='result'></h2>
+		</div>
+		<div class='box-button'>
+			<button class="sqrt" id ="sqrt" >&#8730;</button>
+			<button class="sqrt3" id ="sqrt3">&#179;&#8730;</button>
+			<button class="square" id ="square" >x&#178;</button>
+			<button class="square3" id ="square3">x&#179;</button>
+			<button class="del" id ="del" >Del</button>
+			<button class="Abs" id ="Abs"  >Abs</button>
+		    <button class="Log" id ="Log"  >Log</button>
+		    <button class="Sin" id ="Sin"  >Sin</button>
+		    <button class="Cos" id ="Cos"  >Cos</button>
+		    <button class="Tan" id ="Tan"  >Tan</button>
+			<button class="Round" id ="Round" >Round</button>
+			<button class="number" id ="number7">7</button>
+		    <button class="number" id ="number8" >8</button>
+		    <button class="number" id ="number9" >9</button>
+		    <button class="operator" value="/" id ="division" >&#247;</button>
+			<button class="pi" value="3.1415926" id ="pi" >&#960;</button>
+			<button class="number" id ="number4" >4</button>
+		    <button class="number" id ="number5" >5</button>
+		    <button class="number" id ="number6" >6</button>
+		    <button class="operator" value= "*" id ="multiply" >x</button>
+		    <button class="operator" id ="percent"  value="%">%</button>
+		    <button class="number" id ="number1" >1</button>
+		    <button class="number" id ="number2" >2</button>
+		    <button class="number" id ="number3" >3</button>
+		    <button class="operator" value="-" id ="minus">-</button>
+		    <button class="reset" id ="reset">C</button>
+		    <button class="number" id ="dot" >.</button>
+		    <button class="number" id ="number0" >0</button>		
+		    <button class="operator" id ="plus" value="+">+</button>
+		    <button class="equal" id ="equal" >=</button>
+		</div>
+	</div>	
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script>
+// load DOM
+	$(document).ready(function(){
+		$('#plus').attr('disabled','true');
+		$('#dot').attr('disabled','true');
+		$('#equal').attr('disabled','true');
+		$('#multiply').attr('disabled','true');
+		$('#division').attr('disabled','true');
+	});
+// Get number
+	$('.number').click( function(){
+		$("#calculator").html($("#calculator").html() + $(this).html());
+		$('#plus').removeAttr('disabled');
+		$('#dot').removeAttr('disabled');
+		$('#equal').removeAttr('disabled');
+		$('#multiply').removeAttr('disabled');
+		$('#division').removeAttr('disabled');
+		$('#pi').attr('disabled','true');
+		Maxcaculator();
+		});
+// Get operation
+	$('.operator').click(function(){
+		let x = $("#calculator").html();
+			$("#calculator").html(x+ $(this).val());
+			$('#pi').removeAttr('disabled');
+			if(x.indexOf($(this).val())!=0){  //Chặn không cho 2 dấu cùng lúc
+				$('#plus').attr('disabled','true');
+				$('#dot').attr('disabled','true');
+				$('#equal').attr('disabled','true');
+				$('#multiply').attr('disabled','true');
+				$('#division').attr('disabled','true');
+			}
+		});
+// Equal function
+	let clearresult = function(){
+		$("#result").html("");
+		}
+
+	$('#equal').click(function(){
+		clearresult();
+		$("#result").html($("#result").html()+eval($("#calculator").html()));
+		$("#calculator").html($("#result").html());
+		});
+// Max calculator
+	let Maxcaculator = function(){
+		let x = $("#calculator").html();
+		if (Number(x) === "Number" && x.length >=5){
+			$("#calculator").html(Number(x).toExponential(2));
+		}
+	}
+// C function
+	$('#reset').click(function(){
+		$("#calculator").html("");
+		$("#result").html("");
+		$('#plus').attr('disabled','true');
+		$('#dot').attr('disabled','true');
+		$('#equal').attr('disabled','true');
+		$('#multiply').attr('disabled','true');
+		$('#division').attr('disabled','true');
+		});
+// Del function
+	$('#del').click(function(){
+		let x = $("#calculator").html();
+		let y = x.substring(0,x.length-1);
+		$("#calculator").html(y);
+		});
+// Get pinumber
+	$('#pi').click(function(){
+		$("#calculator").html($("#calculator").html()+$(this).val());
+		$('#plus').removeAttr('disabled');
+		$('#equal').removeAttr('disabled');
+		$('#multiply').removeAttr('disabled');
+		$('#division').removeAttr('disabled');
+		});
+// Round function
+	$('#Round').click(function(){	
+		let x = $("#result").html();
+		if(x !=0){
+		$("#result").html(Math.round(x));
+		}
+		});
+// Abs function
+	$('#Abs').click(function(){
+		let x = $("#result").html();
+		if(x !=0){
+		$("#result").html(Math.abs(x));
+		}
+		});
+// Log function
+	$('#Log').click(function(){
+		let x = $("#calculator").html();
+		if(x !=0){
+		$("#result").html(Math.log(x));
+		}
+		});
+// Sin function
+	$('#Sin').click(function(){
+		let x = $("#calculator").html();
+		if(x !=0){
+		$("#result").html(Math.sin(x));
+		}
+		});
+// Cos function
+	$('#Cos').click(function(){
+		let x = $("#calculator").html();
+		if(x !=0){
+		$("#result").html(Math.cos(x));
+		}
+		});
+// Tan function
+	$('#Tan').click(function(){
+		let x = $("#calculator").html();
+		if(x !=0){
+		$("#result").html(Math.tan(x));
+		}
+		});
+// Sqrt function
+	$('#sqrt').click(function(){
+		let x = $("#calculator").html();
+		if(x !=0){
+		$("#result").html(Math.sqrt(x));
+		}
+		});
+// Sqrt3 function
+	$('#sqrt3').click(function(){
+		let x = $("#calculator").html();
+		if(x !=0){
+		$("#result").html(Math.pow(x,(1/3)));
+		}
+		});
+// Square function
+	$('#square').click(function(){
+		let x = $("#calculator").html();
+		if(x !=0){
+		$("#result").html(Math.pow(x,2));
+		}
+		});
+// Square3 function
+	$('#square3').click(function(){
+		let x = $("#calculator").html();
+		if(x !=0){
+		$("#result").html(Math.pow(x,3));
+		}
+		});
+</script>
+</body>
+</html>
