@@ -1,0 +1,183 @@
+/* Variables */
+    $screenContentSize: 72%;
+    $font-primary: Helvetica, Arial, Verdana, sans-serif;
+    $font-secondly: Roboto, sans-serif;;
+
+html {
+    font-size: 62.5%; //transfer 1rem = 10px
+    font-family: $font-secondly;
+}
+
+    /* set base values */
+    $text-base-size: 1rem; 
+       /* type scale */
+    $text-xs: 1.2rem; //12px
+    $text-sm: 1.4rem; //14px
+    $text-md: 1.6rem; //16px
+    $text-lg: 2rem; //20px
+    $text-xl: 2.4rem; //24px
+    $text-xxl: 3rem; //30px
+    $text-xxxl: 4rem; // 40px
+
+    /* line-height */
+    $heading-line-height: 1.2;
+    $body-line-height: 1.4;
+    /* color */
+    $color-primary: #0056b8;
+    $color-secondly: #40B04C;
+    $color-text: #000000;
+    $color-text-heading: #ffffff;
+    $color-link: var(--color-primary);
+    $color-link-visited: #3169BE;
+    /* spacing */
+    $baseline: 2.4rem;
+    $space-sm:   $baseline/2;
+    $space-md:  $baseline;
+    $space-lg:  $baseline*2;
+    $space-xl:  $baseline*3;
+/* breakpoint */
+    $sm: 576px;
+    $md: 768px;
+    $lg: 992px;
+    $xl: 1200px;
+
+/* Mixin */
+@mixin smooth($val){
+    -webkit-transition: all $val ease-in-out;
+    -moz-transition: all $val ease-in-out;
+    -o-transition: all $val ease-in-out;
+    -ms-transition: all $val ease-in-out;
+    transition: all $val ease-in-out;
+}
+
+@mixin set-line($line, $lineHeight){
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: $line;
+    -webkit-box-orient: vertical;
+    line-height: $lineHeight;
+    height: calc(#{$lineHeight} * #{$line});
+}
+@mixin absolute_($t,$r,$b,$l){
+    position: absolute;
+    top: $t;
+    right: $r;
+    bottom: $b;
+    left: $l;
+}
+@mixin absolute($val){
+    @include absolute_($val,$val,$val,$val);
+}
+@mixin fixed_($t,$r,$b,$l){
+    position: fixed;
+    top: $t;
+    right: $r;
+    bottom: $b;
+    left: $l;
+}
+@mixin fixed($val){
+    @include fixed_($val,$val,$val,$val);
+}
+@mixin mar($val){
+    margin-left: $val;
+    margin-right: $val;
+}
+@mixin pad($val){
+    padding-left: $val;
+    padding-right: $val;
+}
+
+/* Class and Placeholder*/
+%fixed-size{
+    width: $screenContentSize;
+    margin: auto;
+}
+%flex-between{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+%flex-center{
+    display: flex;
+    justify-content: center;
+}
+%flex-start{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+%flex-end{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+%flex-mid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+%img-center{
+    width: 100%;
+    height: 100%;
+}
+%bg-center{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+%opacity{
+    opacity: 1;
+    transition: opacity 0.5s linear;
+    cursor: pointer;
+}
+img {
+    border-radius: 2px;
+    max-width: 100%;
+    &:hover {
+        @extend %opacity;
+    }
+}
+//--Annimation--//
+@keyframes scale {
+  0%   {transform: scale(0.91);}
+  25%  {transform: scale(0.94);}
+  50%  {transform: scale(0.97);}
+  75%  {transform: scale(1);}
+  100% {transform: scale(1.03);}
+};
+@keyframes snow {
+  0% {
+    background-position: 0px 0px, 0px 0px, 0px 0px; }
+  50% {
+    background-position: 500px 500px, 100px 200px, -100px 150px; }
+  100% {
+    background-position: 500px 1000px, 200px 400px, -100px 300px; } }
+@-webkit-keyframes snow {
+  0% {
+    background-position: 0px 0px, 0px 0px, 0px 0px; }
+  50% {
+    background-position: 500px 500px, 100px 200px, -100px 150px; }
+  100% {
+    background-position: 500px 1000px, 200px 400px, -100px 300px; } }
+@keyframes move {
+  0%   {left: 7%; }
+  25%  {left: 10%;}
+  50%  {left: 11%;}
+  75%  {left: 12%;}
+  100% {left: 15%;}
+};
+@keyframes bgc {
+    0%  { color: #3eb060; }
+    25%  { color: #ffffff;}
+    50%  { color: #3eb060;}
+    75%  { color: #ffffff;}
+    100% { color: #3eb060;}
+}
+@keyframes fontSize {
+    0%  { font-size: 1.8rem; }
+    25%  { font-size: 1.85rem; }
+    50%  { font-size: 1.9rem; }
+    75%  { font-size: 1.95rem; }
+    100% { font-size: 2rem; }
+}

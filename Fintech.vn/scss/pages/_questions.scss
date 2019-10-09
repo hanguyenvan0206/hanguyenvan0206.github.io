@@ -1,0 +1,341 @@
+//***next-page***//
+
+.page{
+	//border: 1px solid black;
+	background-color: #f7f7f7;
+	.page-container{
+		@extend %fixed-size;
+		padding: 2rem 0 2rem 0;
+		font-size: 1.6rem;
+		color: #000000;
+		i{font-size: 1.4rem; color:  $color-primary;}
+		a{font-size: 1.6rem; color:  $color-primary;}
+		}
+	}
+@media (min-width: 1024px) and (max-width: 1279px){
+.page{
+	.page-container{
+		width: 85%;
+		
+		}
+	}
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+.page{
+	.page-container{
+		width: 90%;
+		
+		}
+	}
+}
+@media (min-width: 600px) and (max-width: 767px) {
+.page{
+	.page-container{
+		width: 95%;
+		
+		}
+	}
+}
+@media (max-width: 599px){
+.page{
+	.page-container{
+		width: 90%;
+		
+		}
+	}
+}
+//***questions***//
+.questions{
+	.questions-container{
+		padding-top: 1.5rem;
+		@extend %fixed-size;
+		.row{
+			margin: 0;
+			.col1{
+				@extend %flex-start;
+				align-items: flex-start;
+				.borrow-sidebar{
+					@extend .borrow-sidebar;
+					.borrow-sidebar-containner{
+						.loan-information{
+							.loan-btn{
+								border-top: 1px solid #eaeaea;
+								@extend %flex-mid;
+								padding: 1.5rem 0 1.5rem 0;
+								button{
+									@include btn-2(14.5rem,4.4rem,1.6rem,4px)
+								}
+							}	
+						}
+					}
+				}
+
+			}
+			.col2{
+				padding: 0;
+				.question-search{
+					.question-search-container{
+						width: 100%;
+						.form-inline{
+							@extend %flex-between;
+							width: 100%;
+							border: 1px solid #eaeaea;
+							border-radius: 6px;
+							.form-control{
+								width: 90%;
+								font-size: 1.6rem;
+								padding: 0.7rem 1rem 0.7rem 1rem;
+								border: none;
+								border-radius: 8px;
+							}
+							i{font-size: 1.6rem;
+								cursor: pointer;
+								margin-right: 1rem;
+							}
+						}
+
+					}
+
+				}
+			.questions-content{
+						margin-top: 1.5rem;
+						h3{font-size: 2rem;font-weight: 550; margin-bottom: 1.5rem;}
+						.questions-decs{
+							margin-bottom: 1.5rem;
+							border-bottom: 1px solid #eaeaea;
+							.questions-item{
+								@extend %flex-between;
+								h4{font-size: 1.8rem; line-height: 1.35;}
+								i{font-size: 1.6rem; color: $color-primary;
+									display: none;
+								}
+								
+							}
+							.questions-item-decs{
+								h5{font-size: 1.6rem; line-height: 1.35;
+									a{font-size: 1.5rem}
+
+								}
+							}
+						}
+					}	
+		
+			}
+		}
+	}
+}
+@media (min-width: 1024px) and (max-width: 1279px){
+.questions{
+	.questions-container{
+		width: 85%;
+		
+		}
+	}
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+.questions{
+	.questions-container{
+		width: 90%;
+		
+		}
+	}
+}
+@media (min-width: 600px) and (max-width: 767px) {
+.questions{
+	.questions-container{
+		width: 95%;
+		.row{
+			.col1{padding: 0;}
+			.col2{padding: 0;}
+		}
+		}
+	}
+}
+@media (max-width: 599px){
+.questions{
+	.questions-container{
+		width: 90%;
+		.row{
+			.col1{padding: 0;}
+			.col2{padding: 0;}
+		}
+		
+		}
+	}
+}
+//question//
+.question1{
+	background-color: #0073b1;
+	.title-box-3{
+		@extend .title-box;
+		.title-box-content{
+			h1{color: #ffffff;}
+		}
+	}
+	.question-container{
+		@extend %fixed-size;
+		@extend %flex-mid;
+		.row{
+			padding: 0;
+			margin: 0;
+			.col-md-4{
+				//border: 1px solid black;
+				padding: 0;
+				.question-title{
+					width: 100%;
+					display: flex;
+					align-items: center;
+					border-bottom: 1px solid #ffffff;
+					padding: 0;
+					padding: 1rem 0 1rem 1rem;
+					h4{
+						@extend %flex-start;
+						width: 100%;
+						color: #ffffff;
+						font-weight: 550;
+						font-size: 1.7rem;
+						i{margin-left: 1rem;}
+					}
+
+				}
+				.question-content{
+					padding: 1rem 1rem 1.5rem 1.5rem;
+					width: 100%;
+					a{
+						color: #ffffff;
+						font-size: 1.7rem;
+						line-height: 1.25;
+						text-align: justify;
+						line-height: 1.3;
+						margin-bottom: 0.5rem;
+
+					}
+				}
+			}
+
+		}
+	}
+}
+@media (min-width: 1024px) and (max-width: 1279px){
+.question1{
+	.question-container{
+		width: 85%;
+	}
+}}
+@media (min-width: 768px) and (max-width: 1023px) {
+.question1{
+	.question-container{
+		width: 90%;
+	}
+}}
+@media (min-width: 600px) and (max-width: 767px) {
+.question1{
+	.question-container{
+		width: 95%;
+		.row{
+			.col-md-4{
+			}
+			.col-md-4:last-child{
+			}
+		}
+	}
+}}
+@media (max-width: 599px){
+.question1{
+	.question-container{
+		width: 90%;
+		.row{
+			.col-md-4{
+			}
+			.col-md-4:last-child{
+			}
+
+		}
+	}
+}}
+//***make-question***//
+.make-question{
+	.make-question-container{
+		@extend %fixed-size;
+		padding: 1.5rem 0 1.5rem 0;
+		.row{
+			margin: 0;
+			.col2{
+				padding: 0;
+				.title{
+					width: 100%;
+					@extend %flex-mid;
+					h2{
+						font-weight: 550;
+						font-size: 2rem;
+					}
+				}
+				form{
+					font-size: 1.6rem;
+					font-weight: 550;
+					::-webkit-input-placeholder {
+						   font-size: 1.4rem;
+						}
+						:-moz-placeholder {
+						    font-size: 1.4rem;
+						}
+						::-moz-placeholder {
+						   font-size: 1.4rem;
+						}
+						:-ms-input-placeholder {
+						    font-size: 1.4rem;
+						}
+						.form-row{
+							.col-md-12, .col-md-6{
+								label{
+									margin-bottom: 0.3rem;
+								}
+								textarea, input{
+									font-size: 1.6rem;
+									padding: 0.7rem 1rem 0.7rem 1rem;
+								}
+							}
+						}
+						.form-group{
+							label{
+									margin-bottom: 0.3rem;
+								}
+								textarea{
+									font-size: 1.6rem;
+									padding: 0.7rem 1rem 0.7rem 1rem;
+								}
+						}
+					
+					button{
+						font-size: 1.8rem;
+						@include btn-2(13rem,4rem,0,4px);
+					}
+				}
+			}
+		}
+	}
+}
+@media (min-width: 1024px) and (max-width: 1279px){
+.make-question{
+	.make-question-container{
+		width: 85%;
+	}
+}}
+@media (min-width: 768px) and (max-width: 1023px) {
+.make-question{
+	.make-question-container{
+		width: 90%;
+	}
+}}
+@media (min-width: 600px) and (max-width: 767px) {
+.make-question{
+	.make-question-container{
+		width: 95%;
+	}
+}}
+@media (max-width: 599px){
+.make-question{
+	.make-question-container{
+		width: 90%;
+	}
+}}

@@ -1,0 +1,67 @@
+{ "service": [
+  {
+      "id": "10",
+      "name": "Tiêu dùng thả ga",
+      "img": "service-10",
+      "time": "25",
+      "borrow": "7.000.000 VND"
+    },
+ {
+      "id": "11",
+      "name": "Du lịch Hàn Quốc",
+      "img": "service-11",
+      "time": "20",
+      "borrow": "3.000.000 VND"
+    },
+  {
+      "id": "12",
+      "name": "Mua sắm Vinmart",
+      "img": "service-12",
+      "time": "10",
+      "borrow": "8.000.000 VND"
+    },
+  {
+      "id": "13",
+      "name": "BigC-Tiêu dùng",
+      "img": "service-13",
+      "time": "20",
+      "borrow": "1.000.000 VND"
+    },
+  {
+      "id": "14",
+      "name": "Thăm khám sức khỏe",
+      "img": "service-14",
+      "time": "30",
+      "borrow": "6.000.000 VND"
+    },
+    {
+      "id": "15",
+      "name": "Xây dựng gia đình",
+      "img": "service-15",
+      "time": "20",
+      "borrow": "5.000.000 VND"
+    },
+    {
+      "id": "16",
+      "name": "Du lịch Thailand",
+      "img": "service-16",
+      "time": "10",
+      "borrow": "8.000.000 VND"
+    },
+    {
+      "id": "17",
+      "name": "Đóng tiền học",
+      "img": "service-17",
+      "time": "10",
+      "borrow": "7.000.000 VND"
+    },
+    {
+      "id": "18",
+      "name": "Tiêu dùng cá nhân",
+      "img": "service-18",
+      "time": "10",
+      "borrow": "1.000.000 VND"
+    }
+    
+  ]
+}

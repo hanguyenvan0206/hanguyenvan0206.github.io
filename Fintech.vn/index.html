@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Fintech.vn</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/ico" href="#">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<link rel="stylesheet" type="text/css" href="css/slick.css">
+	<link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Charm:700|Dancing+Script:700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Monoton&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/v4-shims.css">
+</head>
+<body>
+	<header>
+		<navbar>
+				
+		</navbar>
+		<banner>
+			<div class="home-banner-Container">
+				<div class="owl-carousel banner-carousel owl-theme owl-loaded">
+				    <div class="owl-stage-outer">
+				        <div class="owl-stage">
+				            <div class="owl-item">
+				            	<img src="img/banner-1.jpg">
+				            	<div class="banner-content">
+				            		<h1>Chương trình vay vốn nhận ngay hàng ngàn quà tặng hấp dẫn</h1>
+				            		<div class="banner-btn"><button><a href="#/">Tìm hiểu ngay</a></button></div>
+				            		
+				            	</div>
+				            </div>
+				            <div class="owl-item">
+				            	<img src="img/banner-2.jpg">
+				            	<div class="banner-content">
+				            	</div>
+				            </div>
+				        </div>
+				    </div>
+				    <div class="owl-nav">
+				        <div class="owl-prev-0"><i class="fas fa-chevron-left"></i></div>
+				        <div class="owl-next-0"><i class="fas fa-chevron-right"></i></div>
+				    </div>
+				</div>
+			</div>
+		</banner>
+	</header>
+	<section>
+		<div class="top-borrowBtn"></div>
+		<div class="reasons-use">
+		<div class="title-box" data-200-center-top="transform: scale(0.8); opacity: 0" data-200-center-center="transform: scale(1); opacity: 1">
+			<div class="title-box-content">
+				<h1>Lý do sử dụng dịch vụ tại Fintech.vn</h1>
+			</div>
+		</div>
+		<div class="reasons-use-container" data-300-center-top="transform: scale(0.8); opacity: 0" data-300-center-center="transform: scale(1); opacity: 1">
+			<div class="borrow-sidebar">
+					<div class="borrow-sidebar-title">
+						<h3>Vay chỉ trong 30 phút</h3>
+						<h4>Thời gian nhận tiền: <span id = 'time-recieve'></span></h4>
+					</div>
+					<div class="borrow-sidebar-containner">
+						<div class="borrow-sidebar-bar">
+							<div class="borrow-bar-money">
+								<div class="money-mount">
+									<h4>Số tiền:</h4>
+									<h4 id = 'money-mount'></h4></div>
+								<div class="slide-money">
+	  								<input type="range" min="1" max="20" value="5" step="1" class="slider" id="myRange">
+								</div>
+								<div class="max-borrow"><p>Đến 20 Triệu đồng</p></div>
+							</div>
+							<div class="borrow-bar-time">
+								<div class="time-borrow">
+									<h4>Thời gian:</h4>
+									<h4 id = 'time-borrow'></h4></div>
+								<div class="slide-time">
+	  								<input type="range" min="1" max="12" value="2" step="1" class="slider" id="myRange-time">
+								</div>
+								<div class="max-time-borrow"><p>Đến 12 Tháng</p></div>		
+							</div>
+						</div>
+						<div class="loan-information">
+							<h4>Thông tin khoản vay:</h4>
+							<div class="loan-information-content">
+								<table>
+								  <tr>
+								    <th>Tiền Vay:</th>
+								    <td class = 'total-borrow'></td>
+								  </tr>
+								  <tr>
+								    <th>Lãi suất:</th>
+								    <td class = 'total-interest'></td>
+								  </tr>
+								  <tr>
+								    <th>Tổng:</th>
+								    <td class = 'total-payment'></td>
+								  </tr>
+								  <tr>
+								    <th>Đến hạn:</th>
+								    <td class = 'time-maturity'></td>
+								  </tr>
+								</table>
+							</div>
+							<div class="loan-btn"><button ><a>Đăng ký Vay</a></button></div>
+						</div>
+					</div>
+				</div>
+			<div class="customer">
+				<div class="reason-use-img">
+					<div class="reason-img">	
+					</div>
+					<div class="dowload-content">
+						<h4>Tải xuống ứng dụng</h4>
+					</div>
+					<div class="dow-app">
+						<a href="#"><img src="img/dowload.jpg"></a>
+					</div>
+				</div>
+				<div class="owl-carousel customer-carousel owl-theme">
+				    <div class="item item-1">
+				    	<div class="customer-item">
+				    		<h2>Khách hàng mới</h2>
+				    	</div>
+				    	<div class="customer-item-content">
+				    		<div class="customer-service-wraper">
+					    		<div class="customer-service">
+					    		<i class="far fa-star"></i>
+					    		<h3><span>Hồ sơ sẽ được duyệt trong vòng 30 phút </span>từ lúc bạn gửi yêu cầu</h3>
+					    		</div>
+					    		<div class="customer-service">
+					    		<i class="far fa-star"></i>
+					    		<h3>Trễ hạn thanh toán: <span>3 ngày không bị phạt</span></h3>
+					    		</div>
+					    		<div class="customer-service">
+					    		<i class="far fa-star"></i>
+					    		<h3>Không cần giấy chứng nhận thu nhập <span>chỉ cần CMND</span></h3>
+					    		</div>
+					    	</div>
+				    	</div>
+				    	<div class="customer-btn">
+				    		<button><a href="#/">Đăng ký vay mới</a></button>
+				    	</div>
+				    </div>
+				    <div class="item item-2">
+				    	<div class="customer-item">
+				    		<h2>Khách hàng vay lại</h2>
+				    	</div>
+				    	<div class="customer-item-content">
+				    		<div class="customer-service-wraper">
+					    		<div class="customer-service">
+					    		<i class="far fa-star"></i>
+					    		<h3>Lãi suất vay được <span>giảm tới 20%</span> và <span>giảm tới 2%</span> lãi trả trước hạn</h3>
+					    		</div>
+					    		<div class="customer-service">
+					    		<i class="far fa-star"></i>
+					    		<h3>Được vay đến <span>20.000.000 VND</span></h3>
+					    		</div>
+					    		<div class="customer-service">
+					    		<i class="far fa-star"></i>
+					    		<h3>Được tham gia <span>chương trình Hoàn trả tiền</span></h3>
+					    		</div>
+					    	</div>
+				    	</div>
+				    	<div class="customer-btn">
+				    		<button><a href="#/">Đăng ký vay lại</a></button>
+				    	</div>
+				    </div>
+				</div>	
+			</div>
+		</div>
+		</div>
+				<div class="newService">
+		<div class="title-box-2" data-200-center-top="transform: scale(0.8); opacity: 0" data-200-center-center="transform: scale(1); opacity: 1">
+			<div class="title-box-content">
+				<h1>Sản phẩm, Dịch vụ mới tại Fintech.vn</h1>
+			</div>
+		</div>
+			<div class="newService-container" data-300-center-top="transform: scale(0.8); opacity: 0" data-300-center-center="transform: scale(1); opacity: 1">
+				<div class="owl-carousel newService-carousel owl-theme owl-loaded">
+				    <div class="owl-stage-outer">
+				        <div class="owl-stage">
+				            <div class="owl-item">
+				            	<div class="newService-title">
+				            		<h5>Gói vay</h5>
+				            		<h4>Du lịch cuối tuần</h4>
+				            	</div>
+								<div class="overlay">
+								<img src="img/service-1.jpg">
+								</div>
+								<div class="money-time">
+									<div class="newService-content-desc">
+										<table>
+										  <tr>
+										    <th>Số tiền</th>
+										    <td>2.000.000 VND</td> 
+										  </tr>
+										  <tr>
+										    <th>Thời gian</th>
+										    <td>15 ngày</td> 
+										  </tr>
+										</table>
+									</div>
+								</div>
+								<div class="newService-content">
+									<div class="newService-content-decs">
+										<h4>Cuối tuần gia đình bạn muốn đi du lịch, chưa đủ tiền hoặc chưa nhận lương. Vay ngay tại Fintech với chương trình ưu đãi lãi suất lên tới 2%.</h4>
+									</div>
+								</div>
+								<div class="newService-btn">
+									<button><a href="#/">Đăng ký vay</a></button>
+								</div>
+				            </div>
+				            <div class="owl-item">
+				            	<div class="newService-title">
+				            		<h5>Gói vay</h5>
+				            		<h4>Visa du lịch Nhật Bản</h4>
+				            	</div>
+								<div class="overlay">
+								<img src="img/service-2.jpg">
+								</div>
+								<div class="money-time">
+									<div class="newService-content-desc">
+										<table>
+										  <tr>
+										    <th>Số tiền</th>
+										    <td>9.000.000 VND</td> 
+										  </tr>
+										  <tr>
+										    <th>Thời gian</th>
+										    <td>20 ngày</td> 
+										  </tr>
+										</table>
+									</div>
+								</div>
+								<div class="newService-content">
+									<div class="newService-content-decs">
+										<h4>Chương trình ưu đãi khi vay làm thủ tục visa Nhật Bản. Nếu bạn là du học sinh hay chuẩn bị đi du lịch tại nhật bản nhanh chóng không nên bỏ qua cơ hội này.</h4>
+									</div>
+								</div>
+								<div class="newService-btn">
+									<button><a href="#">Đăng ký vay</a></button>
+								</div>
+				            </div>
+				            <div class="owl-item">
+				            	<div class="newService-title">
+				            		<h5>Gói vay</h5>
+				            		<h4>Vay tiêu dùng, mua sắm</h4>
+				            	</div>
+								<div class="overlay">
+								<img src="img/service-3.jpg">
+								</div>
+								<div class="money-time">
+									<div class="newService-content-desc">
+										<table>
+										  <tr>
+										    <th>Số tiền</th>
+										    <td>1.000.000 VND</td> 
+										  </tr>
+										  <tr>
+										    <th>Thời gian</th>
+										    <td>10 ngày</td> 
+										  </tr>
+										</table>
+									</div>
+								</div>
+								<div class="newService-content">
+									<div class="newService-content-decs">
+										<h4>Gói vay tiêu dùng ưu đãi khi vay vốn mua sắm trên toàn quốc thanh toán qua tất các siêu thị bằng ứng dụng của chúng tôi. Nhanh tay đăng ký ngay hôm nay.</h4>
+									</div>
+								</div>
+								<div class="newService-btn">
+									<button><a href="#/">Đăng ký vay</a></button>
+								</div>
+				            </div>
+				            <div class="owl-item">
+				            	<div class="newService-title">
+				            		<h5>Gói vay</h5>
+				            		<h4>Chi tiêu gia đình</h4>
+				            	</div>
+								<div class="overlay">
+								<img src="img/service-4.jpg">
+								</div>
+								<div class="money-time">
+									<div class="newService-content-desc">
+										<table>
+										  <tr>
+										    <th>Số tiền</th>
+										    <td>5.000.000 VND</td> 
+										  </tr>
+										  <tr>
+										    <th>Thời gian</th>
+										    <td>1 tháng</td> 
+										  </tr>
+										</table>
+									</div>
+								</div>
+								<div class="newService-content">
+									<div class="newService-content-decs">
+										<h4>Cuối tháng bạn chưa nhận lương nhưng vẫn phải chi tiêu cho gia đình. Vay ngay tại Fintech.vn với nhiều chương trình ưu đãi hấp dẫn.</h4>
+									</div>
+								</div>
+								<div class="newService-btn">
+									<button><a href="#/">Đăng ký vay</a></button>
+								</div>
+				            </div>
+				            <div class="owl-item">
+				            	<div class="newService-title">
+				            		<h5>Gói vay</h5>
+				            		<h4>Đồng hành cùng nhà nông</h4>
+				            	</div>
+								<div class="overlay">
+								<img src="img/service-5.jpg">
+								</div>
+								<div class="money-time">
+									<div class="newService-content-desc">
+										<table>
+										  <tr>
+										    <th>Số tiền</th>
+										    <td>7.000.000 VND</td> 
+										  </tr>
+										  <tr>
+										    <th>Thời gian</th>
+										    <td>45 ngày</td> 
+										  </tr>
+										</table>
+									</div>
+								</div>
+								<div class="newService-content">
+									<div class="newService-content-decs">
+										<h4>Bạn luôn phải suy nghĩ khi chưa đủ tiền mua sắm cây trồng vật nuôi. Vay nhanh tại Fintech.vn, chúng tôi luôn tạo điều kiện cho phát triển nông nghiệp</h4>
+									</div>
+								</div>
+								<div class="newService-btn">
+									<button><a href="#/">Đăng ký vay</a></button>
+								</div>
+				            </div>
+				            <div class="owl-item">
+				            	<div class="newService-title">
+				            		<h5>Gói vay</h5>
+				            		<h4>Góp vốn kinh doanh</h4>
+				            	</div>
+								<div class="overlay">
+								<img src="img/service-6.jpg">
+								</div>
+								<div class="money-time">
+									<div class="newService-content-desc">
+										<table>
+										  <tr>
+										    <th>Số tiền</th>
+										    <td>5.000.000 VND</td> 
+										  </tr>
+										  <tr>
+										    <th>Thời gian</th>
+										    <td>25 ngày</td> 
+										  </tr>
+										</table>
+									</div>
+								</div>
+								<div class="newService-content">
+									<div class="newService-content-decs">
+										<h4>Các hộ kinh doanh đang tạm thiếu vốn để nhập hàng. Đăng ký vay ngay hôm nay tại Fintech để được nhận nhiều ưu đãi và nhận nhiều phần quà hấp dẫn</h4>
+									</div>
+								</div>
+								<div class="newService-btn">
+									<button><a href="#/">Đăng ký vay</a></button>
+								</div>
+				            </div>
+				            <div class="owl-item">
+				            	<div class="newService-title">
+				            		<h5>Gói vay</h5>
+				            		<h4>Sức khỏe gia đình</h4>
+				            	</div>
+								<div class="overlay">
+								<img src="img/service-7.jpg">
+								</div>
+								<div class="money-time">
+									<div class="newService-content-desc">
+										<table>
+										  <tr>
+										    <th>Số tiền</th>
+										    <td>3.000.000 VND</td> 
+										  </tr>
+										  <tr>
+										    <th>Thời gian</th>
+										    <td>15 ngày</td> 
+										  </tr>
+										</table>
+									</div>
+								</div>
+								<div class="newService-content">
+									<div class="newService-content-decs">
+										<h4>Bạn và gia đình đang có người ốm mà chưa đủ tiền mua thuốc khám bệnh. Chúng tôi sẵn sàng đáp ứng nhu cầu đmả bảo sức khỏe cho gia đình</h4>
+									</div>
+								</div>
+								<div class="newService-btn">
+									<button><a href="#/">Đăng ký vay</a></button>
+								</div>
+				            </div>
+				            <div class="owl-item">
+				            	<div class="newService-title">
+				            		<h5>Gói vay</h5>
+				            		<h4>Hỗ trợ kinh doanh</h4>
+				            	</div>
+								<div class="overlay">
+								<img src="img/service-8.jpg">
+								</div>
+								<div class="money-time">
+									<div class="newService-content-desc">
+										<table>
+										  <tr>
+										    <th>Số tiền</th>
+										    <td>7.000.000 VND</td> 
+										  </tr>
+										  <tr>
+										    <th>Thời gian</th>
+										    <td>3 tháng</td> 
+										  </tr>
+										</table>
+									</div>
+								</div>
+								<div class="newService-content">
+									<div class="newService-content-decs">
+										<h4>Chúng tôi luôn sẵn sàng hôc trợ mọi lúc mọi nơi cho các hộ kinh doanh. Hãy đến với Fintech để nhận được nhiều ưu đãi ngay hôm nay.</h4>
+									</div>
+								</div>
+								<div class="newService-btn">
+									<button><a href="#/">Đăng ký vay</a></button>
+								</div>
+				            </div>
+				        </div>
+				    </div>
+				    <div class="owl-nav">
+				        <div class="owl-prev"><i class="fas fa-chevron-left"></i></div>
+				        <div class="owl-next"><i class="fas fa-chevron-right"></i></div>
+				    </div>
+				</div>
+			</div>
+		</div>
+		<div class="about-us">
+			<div class="title-box-2" data-200-center-top="transform: scale(0.8); opacity: 0" data-200-center-center="transform: scale(1); opacity: 1">
+				<div class="title-box-content">
+					<h1>Fintech.vn so với các hệ thống khác</h1>
+				</div>
+			</div>
+			<div class="about-us-container" data-300-center-top="transform: scale(0.8); opacity: 0" data-300-center-center="transform: scale(1); opacity: 1">
+				<div class="about-us-img">
+					<div class="img-us">
+						<div class="img-1"><img src="img/gift.png" alt=""></div>
+						<div class="img-2"><img src="img/family.png" alt=""></div>
+					</div>
+					<div class="us-img-content">
+						<a href="#">Hàng ngàn quà tặng hấp dẫn!</a>
+					</div>
+				</div>
+				<div class="owl-carousel about-us-carousel owl-theme">
+				    <div class="item">
+							<div class="reasons-item-title"><a href="#">Về Chúng Tôi</a></div>
+							<div class="overlay">
+							<img src="img/reason-about.jpg">
+							</div>
+							<div class="item-content">
+								<div class="item-content-desc">
+									<h4><span>Fintech.vn:</span> Là nền tảng cho vay ngang hàng, sử dụng công nghệ để cung cấp dịch vụ hỗ trợ tư vấn tài chính hiện đại và chuyên nghiệp nhất, giúp những Người có nhu cầu vay nhưng không/chưa đủ điều kiện <a href="#/">Xem thêm >></a></h4>
+									
+								</div>
+							</div>
+				    </div>
+				    <div class="item">
+								<div class="reasons-item-title"><a href="#">Điểm khác biệt</a></div>
+								<div class="overlay">
+								<img src="img/reason-differ.png">
+								</div>
+								<div class="item-content">
+									<div class="item-content-desc">
+										<h4><span>Hoạt động:</span> Với các nguyên tắc: Tiết kiệm và tin cậy; Đơn giản và hiệu quả; Trung thực và cởi mở; Thân thiện và lịch sự. Chúng tôi luôn đồng hành và sẵn sàng phục vụ hàng triệu người vay vốn tại Việt Nam <a href="#">Xem thêm >></a></h4>
+									</div>
+							</div>
+				    </div>
+				    <div class="item">
+							<div class="reasons-item-title"><a href="#">Thủ tục vay vốn</a></div>
+							<div class="overlay">
+								<img src="img/reason-how.jpg"></div>
+							<div class="item-content">
+								<div class="item-content-desc">
+									<h4><span>Phục vụ 24/7:</span> Xét duyệt yêu cầu vay tiền online 7 ngày một tuần, 24 giờ một ngày mà không thu thập tài liệu xác minh và không cần đến văn phòng chúng tôi. Luôn phục vụ quý khách hàng mọi lúc, mọi nơi <a href="#/">Xem thêm >></a></h4>
+								</div>
+							</div>
+				    </div>
+				</div>	
+			</div>
+		</div>
+		<div class="question">
+			<div class="title-box-3" data-200-center-top="transform: scale(0.8); opacity: 0" data-200-center-center="transform: scale(1); opacity: 1">
+				<div class="title-box-content">
+				<h1>Các câu hỏi thường gặp</h1>
+				</div>
+			</div>
+			<div class="question-container">
+				<div class="row">
+					<div class="col-12 col-sm-6 col-md-4" data-300-center-top="transform: scale(0.8); opacity: 0" data-300-center-center="transform: scale(1); opacity: 1">
+						<div class="question-title" id ='question-group1'><h4>TRẢ LỜI CÂU HỎI <i class="fas fa-plus-circle" id ='question-plus1'></i> <i class="fas fa-minus-circle" id ='question-minus1'></i></h4></div>
+						<div class="question-content">
+						<a href="#/">Phí cho khoản vay của tôi là bao nhiêu?</a><br>
+						<a href="#/">Mất bao lâu để nhận được tiền từ khoản vay?</a><br>
+						<a href="#/">Tôi có thể thanh toán khoản vay sớm được không?</a><br>
+						<a href="#/">Tôi có thể thanh toán trễ được không?</a><br>
+						<a href="#/">Tôi có thể gia hạn khoản vay không?</a><br>
+						<a href="#/">Tại sao tôi bị từ chối cho vay?</a><br>
+						<a href="#/">Công ty cung cấp dịch vụ cho vay ở những tỉnh/thành nào?</a><br>
+						</div>
+					</div>
+					<div class="col-12 col-sm-6 col-md-4" data-200-center-top="transform: scale(0.8); opacity: 0" data-200-center-center="transform: scale(1); opacity: 1">
+						<div class="question-title" id ='question-group2'><h4>VAY TIỀN ONLINE NHANH <i class="fas fa-plus-circle" id ='question-plus2'></i> <i class="fas fa-minus-circle" id ='question-minus2'></i></h4></div>
+						<div class="question-content">
+						<a href="#/">Vay tiền trả góp theo tháng, không chứng minh thu nhập</a><br>
+						<a href="#/">Vay tín chấp lãi suất thấp, thủ tục đơn giản nhất</a><br>
+						<a href="#/">Vay tiêu dùng tín chấp giải ngân cực kỳ nhanh</a><br>
+						<a href="#/">Vay tiền bằng CMND giải ngân siêu tốc chỉ trong 20 phút</a><br>
+						<a href="#/">Vay tiền nhanh Online trong ngày lãi suất thấp</a><br>
+						</div>
+					</div>
+					<div class="col-12 col-sm-6 col-md-4" data-100-center-top="transform: scale(0.8); opacity: 0" data-100-center-center="transform: scale(1); opacity: 1">
+						<div class="question-title" id ='question-group3'><h4>THANH TOÁN KHOẢN VAY <i class="fas fa-plus-circle" id ='question-plus3'></i> <i class="fas fa-minus-circle" id ='question-minus3'></i></h4></div>
+						<div class="question-content">
+						<a href="#/">Thanh toán trực tuyến</a><br>
+						<a href="#/">Thanh toán qua tài khoản ngân hàng</a><br>
+						<a href="#/">Điều bảo mật</a><br>
+						<a href="#/">Liên hệ</a><br>
+						</div>
+					</div>
+				</div>
+			</div>	
+		</div>
+		<div class="payment">
+			<div class="title-box-3" data-200-center-top="transform: scale(0.8); opacity: 0" data-200-center-center="transform: scale(1); opacity: 1">
+				<div class="title-box-content">
+				<h1>Cách thanh toán khoản vay tại Fintech.vn</h1>
+				</div>
+			</div>
+			<div class="payment-container">
+				<div class="payment-wrapper">
+					 <div class="row">
+						<div class="col-sm-12 col-md-6" data-100-bottom-top="transform: translateX(-200px); opacity: 0" data-center-top="transform: translateX(0px); opacity: 1">
+							<div class="payment-wrapper-content">
+								<div class="payment-wrapper-img">
+									<div class="payment-img">
+										<img src="img/payment-1.jpg">
+									</div>
+								</div>
+								<div class="payment-wrapper-decs">
+									<div class="payment-decs">
+										<h3>Trong tài khoản cá nhân Fintech.vn</h3>
+										<h4>Bạn có thể thanh toán khoản vay trực tuyến mà không cần rời khỏi nhà. Chỉ cần vào tài khoản của bạn và thanh toán bằng thẻ ngân hàng.</h4>
+									</div>
+								</div>	
+							</div>		
+						</div>
+						<div class="col-sm-12 col-md-6" data-100-bottom-top="transform: translateX(200px); opacity: 0" data-center-top="transform: translateX(0px); opacity: 1">
+							<div class="payment-wrapper-content">
+								<div class="payment-wrapper-img">
+									<div class="payment-img">
+										<img src="img/payment-2.jpg">
+									</div>
+								</div>
+								<div class="payment-wrapper-decs">
+									<div class="payment-decs">
+										<h3>Thông qua ngân hàng và ví điện tử</h3>
+										<h4>Thanh toán khoản vay qua phòng giao dịch của các ngân hàng hoặc các ví điện tử Momo, Payoo, ZaloPay,... rất nhanh chóng và thuận tiện.</h4>
+									</div>
+								</div>	
+							</div>	
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="payment-prove" data-300-center-top="transform: scale(0.8); opacity: 0" data-300-center-center="transform: scale(1); opacity: 1">
+				<div class="prove-wrapper">
+					<div class="owl-carousel prove-carousel owl-theme owl-loaded">
+					    <div class="owl-stage-outer">
+					        <div class="owl-stage">
+					            <div class="owl-item">
+							        <h4>Thành Long</h4>
+							    	<p>30 Tuổi, Giáo viên, Nghệ An</p>
+							    	<h5>Trường tôi thường trả chậm tiền lương. Fintech.vn là doanh nghiệp có uy tín, tôi luôn vay để chi tiêu trước khi có lương</h5>	
+					            </div>
+					            <div class="owl-item">
+							        <h4>Vương Vĩ</h4>
+							    	<p>25 Tuổi, Công nhân, Bắc Ninh</p>
+							    	<h5>Tháng trước tôi bị ốm nhưng chưa nhận được tiền đóng họ, nên toi đã vay tại Fintech.vn. Lãi suất khá rẻ mặc dù tôi mới vay lần đầu</h5>
+					            </div>
+					             <div class="owl-item">
+							        <h4>Cường Nam</h4>
+							    	<p>25 Tuổi, Sinh viên, TP. Hồ Chí Minh</p>
+							    	<h5>Mọi thứ đều đơn giản minh bạch. Thanh toán vay theo từng đợt-Lãi cho vay giảm dần, rất thuận tiện</h5>
+					            </div>
+					             <div class="owl-item">
+							        <h4>Đỗ Trung</h4>
+							    	<p>56 Tuổi, Nghỉ hưu, Hà Nội</p>
+							    	<h5>Mới Nghỉ hưu nên tiền lương chưa có. Trong lúc đứa con đầu ốm tôi đã vay tại công ty. Rất thuận tiện và đơn giản.</h5>
+					            </div>         
+					        </div>
+					    </div>
+					    <div class="owl-nav">
+					        <div class="owl-prev-2"><i class="fas fa-chevron-left"></i></div>
+					        <div class="owl-next-2"><i class="fas fa-chevron-right"></i></div>
+				    	</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="Branch">
+			<div class="title-box-2" data-200-center-top="transform: scale(0.8); opacity: 0" data-200-center-center="transform: scale(1); opacity: 1">
+				<div class="title-box-content">
+					<h1>Mạng lưới của Fintech.vn <i class="fas fa-plus-circle" id ="branch-plus"></i> <i class="fas fa-minus-circle" id ="branch-minus"></i></h1>
+				</div>
+			</div>
+			<div class="Branch-container">
+				<div class="Branch-list">
+					<div class="Branch-list-desc">
+						<div class="Branch-desc-item">
+							<div class="row">
+								<div class="col-6 col-sm-6 col-md-3" data-100-bottom-top="transform: translateX(-200px); opacity: 0" data-center-top="transform: translateX(0px); opacity: 1">
+									<div class="area-list"><a href="#/">Hà Nội</a></div>
+									<div class="area-list"><a href="#/">Hải Phòng</a></div>
+									<div class="area-list"><a href="#/">Bắc Ninh</a></div>
+									<div class="area-list"><a href="#/">Nam Định</a></div>
+									<div class="area-list"><a href="#/">Quảng Ninh</a></div>
+									<div class="area-list"><a href="#/">Thái Nguyên</a></div>
+									<div class="area-list"><a href="#/">Vĩnh Phúc</a></div>
+									<div class="area-list"><a href="#/">Hà Nội</a></div>
+									<div class="area-list"><a href="#/">Hải Phòng</a></div>
+									<div class="area-list"><a href="#/">Bắc Ninh</a></div>
+									<div class="area-list"><a href="#/">Nam Định</a></div>
+								</div>
+								<div class="col-6 col-sm-6 col-md-3" data-100-bottom-top="transform: translateY(200px); opacity: 0" data-center-top="transform: translateY(0px); opacity: 1">
+									<div class="area-list"><a href="#/">Thanh Hóa</a></div>
+									<div class="area-list"><a href="#/">Nghệ An</a></div>
+									<div class="area-list"><a href="#/">Hà Tĩnh</a></div>
+									<div class="area-list"><a href="#/">Quảng Bình</a></div>
+									<div class="area-list"><a href="#/">Huế</a></div>
+									<div class="area-list"><a href="#/">Đà Nẵng</a></div>
+									<div class="area-list"><a href="#/">Quảng Trị</a></div>
+									<div class="area-list"><a href="#/">Thanh Hóa</a></div>
+									<div class="area-list"><a href="#/">Nghệ An</a></div>
+									<div class="area-list"><a href="#/">Hà Tĩnh</a></div>
+									<div class="area-list"><a href="#/">Quảng Bình</a></div>
+								</div>
+								<div class="col-6 col-sm-6 col-md-3" data-100-bottom-top="transform: translateY(200px); opacity: 0" data-center-top="transform: translateY(0px); opacity: 1">
+									<div class="area-list"><a href="#/">Hồ Chí Minh</a></div>
+									<div class="area-list"><a href="#/">Đồng Nai</a></div>
+									<div class="area-list"><a href="#/">Long An</a></div>
+									<div class="area-list"><a href="#/">Bình Phước</a></div>
+									<div class="area-list"><a href="#/">Bình Dương</a></div>
+									<div class="area-list"><a href="#/">Vũng Tàu</a></div>
+									<div class="area-list"><a href="#/">Đà Nẵng</a></div>
+									<div class="area-list"><a href="#/">Quảng Trị</a></div>
+									<div class="area-list"><a href="#/">Thanh Hóa</a></div>
+									<div class="area-list"><a href="#/">Nghệ An</a></div>
+									<div class="area-list"><a href="#/">Hà Tĩnh</a></div>
+								</div>
+								<div class="col-6 col-sm-6 col-md-3" data-100-bottom-top="transform: translateX(200px); opacity: 0" data-center-top="transform: translateX(0px); opacity: 1">
+									<div class="area-list"><a href="#/">Hồ Chí Minh</a></div>
+									<div class="area-list"><a href="#/">Đồng Nai</a></div>
+									<div class="area-list"><a href="#/">Long An</a></div>
+									<div class="area-list"><a href="#/">Bình Phước</a></div>
+									<div class="area-list"><a href="#/">Bình Dương</a></div>
+									<div class="area-list"><a href="#/">Vũng Tàu</a></div>
+									<div class="area-list"><a href="#/">Hồ Chí Minh</a></div>
+									<div class="area-list"><a href="#/">Đồng Nai</a></div>
+									<div class="area-list"><a href="#/">Long An</a></div>
+									<div class="area-list"><a href="#/">Bình Phước</a></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>	
+			</div>	
+		</div>
+		<div class="share-news">
+			<div class="title-box-4" data-200-center-top="transform: scale(0.8); opacity: 0" data-200-center-center="transform: scale(1); opacity: 1">
+				<div class="title-box-content">
+					<h1>Thông tin tài chính tiêu dùng</h1>
+				</div>
+			</div>
+			<div class="share-news-container">
+				<div class="owl-carousel  share-news-carousel owl-theme owl-loaded" data-300-center-top="transform: scale(0.8); opacity: 0" data-300-center-center="transform: scale(1); opacity: 1">
+				    <div class="owl-stage-outer">
+				        <div class="owl-stage">
+				            <div class="owl-item">
+				            	<div class="news-img">
+				            		<img src="img/new-1.jpg">
+				            	</div>
+				            	<div class="date-public">
+				            		<p>18 tháng 9 2019</p>
+				            	</div>
+				            	<div class="new-title">
+				            		<a href="#/">Hướng dẫn làm thẻ visa Vietcombank nhanh nhất</a>
+				            	</div>
+				            </div>
+				            <div class="owl-item">
+				            	<div class="news-img">
+				            		<img src="img/new-2.jpg">
+				            	</div>
+				            	<div class="date-public">
+				            		<p>16 tháng 9 2019</p>
+				            	</div>
+				            	<div class="new-title">
+				            		<a href="#/">Bảo hiểm Prudential có lừa đảo khách hàng như bạn nghĩ?</a>
+				            	</div>
+				            </div>
+				            <div class="owl-item">
+				            	<div class="news-img">
+				            		<img src="img/new-3.jpg">
+				            	</div>
+				            	<div class="date-public">
+				            		<p>14 tháng 9 2019</p>
+				            	</div>
+				            	<div class="new-title">
+				            		<a href="#/">Bảo hiểm Chubb Life có lừa đảo thực sự như bạn nghĩ không?</a>
+				            	</div>
+				            </div>
+				            <div class="owl-item">
+				            	<div class="news-img">
+				            		<img src="img/new-4.jpg">
+				            	</div>
+				            	<div class="date-public">
+				            		<p>17 tháng 9 2019</p>
+				            	</div>
+				            	<div class="new-title">
+				            		<a href="#/">1 đô la Mỹ bằng bao nhiêu tiền Việt Nam? Tỷ giá USD hôm nay</a>
+				            	</div>
+				            </div>
+				            <div class="owl-item">
+				            	<div class="news-img">
+				            		<img src="img/new-5.jpg">
+				            	</div>
+				            	<div class="date-public">
+				            		<p>15 tháng 9 2019</p>
+				            	</div>
+				            	<div class="new-title">
+				            		<a href="#/">Vay tín chấp Vietcombank lãi suất thấp, giải ngân nhanh</a>
+				            	</div>
+				            </div>
+				            <div class="owl-item">
+				            	<div class="news-img">
+				            		<img src="img/new-6.jpg">
+				            	</div>
+				            	<div class="date-public">
+				            		<p>11 tháng 9 2019</p>
+				            	</div>
+				            	<div class="new-title">
+				            		<a href="#/">Vay thế chấp ngân hàng nào thấp nhất hiện nay?</a>
+				            	</div>
+				            </div>
+				        </div>
+				    </div>
+				    <div class="owl-nav">
+				        <div class="owl-prev-6"><i class="fas fa-chevron-left"></i></div>
+				        <div class="owl-next-6"><i class="fas fa-chevron-right"></i></div>
+				    </div>
+				</div>
+			</div>
+			<div class="contact">
+				<div class="row">
+					<div class="col-12 col-sm-6 col-md-6" data-100-bottom-top="transform: translateX(-200px); opacity: 0" data-center-top="transform: translateX(0px); opacity: 1">
+						<img src="img/call.jpg" alt="">
+					</div>
+					<div class="col-12 col-sm-6 col-md-6" data-100-bottom-top="transform: translateX(200px); opacity: 0" data-center-top="transform: translateX(0px); opacity: 1">
+						<div class="title"><h2>Đăng ký nhận thêm thông tin</h2></div>
+						<form>
+						  <div class="form-row">
+						    <div class="col-md-6 mb-3">
+						      <label for="validationDefault01">Họ và tên đệm</label>
+						      <input type="text" class="form-control" id="validationDefault01" placeholder="Nguyễn Văn"required>
+						    </div>
+						    <div class="col-md-6 mb-3">
+						      <label for="validationDefault02">Tên</label>
+						      <input type="text" class="form-control" id="validationDefault02" placeholder="Nam" required>
+						    </div>
+						  </div>
+						  <div class="form-row">
+						  	<div class="col-md-12 mb-3">
+							    <label for="exampleInputEmail1">Email</label>
+							    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Fintech.vn@mail.com.vn">
+							</div>
+						  </div>
+						  <div class="form-row">
+						    <div class="col-md-12 mb-3">
+						      <label for="validationDefault03">Địa chỉ</label>
+						      <input type="text" class="form-control" id="validationDefault03" placeholder="99, Trần Hưng Đạo, Hoàn Kiếm, Hà Nội" required>
+						    </div>
+						  </div>
+							<div class="form-group">
+							    <label for="exampleFormControlTextarea1">Bạn cần chúng tôi tư vấn thêm</label>
+							    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+							  </div>
+						  <button class="btn btn-primary" type="submit">Đăng ký</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer>
+    </footer>
+    <div id="myModal"></div>
+	<script src="js/skrollr.min.js"></script>
+	<script
+  	src="https://code.jquery.com/jquery-3.4.1.js"
+ 	integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  	crossorigin="anonymous"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="js/slick.min.js"></script>	
+	<script type="text/javascript" src="js/script_header_footer.js"></script>
+	<script type="text/javascript" src="js/skrollr.js"></script>
+	<script type="text/javascript" src="js/carousel.js"></script>
+	<script type="text/javascript" src="js/loginStatus-1.js"></script>
+	<script type="text/javascript" src="js/home.js"></script>
+
+</body>
+</html>

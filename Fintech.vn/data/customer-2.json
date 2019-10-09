@@ -1,0 +1,42 @@
+{ "customer": [
+  {
+      "id": "0",
+      "time": "5",
+      "name": "Văn Toàn",
+      "age": "25",
+      "job": "Giáo viên",
+      "borrow": "1.000.000đ"
+    },
+  {
+      "id": "1",
+      "time": "15",
+      "name": "Quốc Đại",
+      "age": "28",
+      "job": "Sinh viên",
+      "borrow": "2.000.000đ"
+    },
+  {
+      "id": "2",
+      "time": "10",
+      "name": "Thanh Hoa",
+      "age": "32",
+      "job": "Công nhân",
+      "borrow": "3.000.000đ"
+    },
+  {
+      "id": "3",
+      "time": "20",
+      "name": "Minh Nhật",
+      "age": "35",
+      "job": "Văn phòng",
+      "borrow": "2.000.000đ"
+    },
+  {
+      "id": "4",
+      "time": "20",
+      "name": "Minh Nhật",
+      "age": "38",
+      "job": "Văn phòng",
+      "borrow": "2.000.000đ"
+    },
+  ]}

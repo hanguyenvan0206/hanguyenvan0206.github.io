@@ -1,0 +1,94 @@
+
+:root {
+    font-family: $font-primary;
+}
+h1, h2, h3, h4 {
+    color: $color-primary;
+    margin-bottom: 0.5rem;
+    line-height: $heading-line-height;
+}
+span{
+    color: $color-secondly;
+}
+/* text size */
+.text--xxxl {
+    font-size: $text-xxxl;
+}
+
+h1, .text--xxl {
+    font-size: $text-xxl;
+}
+
+h2, .text--xl {
+    font-size: $text-xl;
+}
+
+h3, .text--lg {
+    font-size: $text-lg;
+}
+
+h4, .text--md {
+    font-size: $text-md;
+}
+
+.text--sm, small {
+    font-size: $text-sm;
+}
+
+.text--xs {
+    font-size: $text-xs;
+}
+
+p {
+    line-height: $body-line-height;
+}
+
+a {
+    color: $color-link;
+
+    &:visited {
+        color: $color-link-visited;
+    }
+}
+
+b, strong {
+    font-weight: bold;
+}
+
+.text-container {
+    h2, h3, h4 {
+        margin-top: $space-sm;
+    }
+    
+    ul, ol, p {
+        margin-bottom: $space-md;
+    }
+
+    ul, ol {
+		list-style-position: outside;
+        padding-left: 2.4rem;
+	}
+
+	ul {
+		list-style-type: disc;
+	}
+
+	ol {
+		list-style-type: decimal;
+    }
+
+    ul li, ol li {
+        line-height: $body-line-height;
+    }
+    span{
+        color: $color-secondly;
+    }
+    
+    em {
+        font-style: italic;
+    }
+
+    u {
+        text-decoration: underline;
+    }
+}

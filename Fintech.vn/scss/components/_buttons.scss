@@ -1,0 +1,89 @@
+@mixin btn($w,$h,$size,$r){
+	background-color: #3587D4;
+	width: $w;
+	height: $h;
+	a{
+		font-size: $size;
+		color: #ffffff;
+		text-decoration: none;
+		font-weight: 550;
+	}
+	border: none;
+	border-radius:$r;
+	outline: none;
+	@include smooth(0.3s);
+	&:hover{
+		background-color: $color-secondly;
+	}
+}
+@mixin btn-1($w,$h,$size,$r){
+	background-color: $color-secondly;
+	width: $w;
+	height: $h;
+	a{
+		font-size: $size;
+		color: #ffffff;
+		text-decoration: none;
+		font-weight: 550;
+	}
+	border: none;
+	border-radius:$r;
+	outline: none;
+	@include smooth(0.3s);
+	&:hover{
+		background-color: #ffffff;
+		a{color: $color-primary;}
+	}
+}
+@mixin btn-2($w,$h,$size,$r){
+	background-color: $color-secondly;
+	width: $w;
+	height: $h;
+	a{
+		font-size: $size;
+		color: #ffffff;
+		text-decoration: none;
+		font-weight: 550;
+	}
+	border: none;
+	border-radius:$r;
+	outline: none;
+	@include smooth(0.3s);
+	&:hover{
+		background-color: #3587D4;
+	}
+}
+@mixin slide-bar($w){
+	.slider {
+	  -webkit-appearance: none;
+	  width: $w;
+	  height: 0.8rem;
+	  border-radius: 10px;
+	  background: #d3d3d3;
+	  outline: none;
+	  opacity: 1;
+	  -webkit-transition: .2s;
+	  transition: opacity .2s;
+	}
+
+	.slider:hover {
+	  opacity: 0.9;
+	}
+
+	.slider::-webkit-slider-thumb {
+	  -webkit-appearance: none;
+	  appearance: none;
+	  width: 1.8rem;
+	  height: 1.8rem;
+	  border-radius: 50%;
+	  background: $color-primary;
+	  cursor: pointer;
+	}
+
+	.slider::-moz-range-thumb {
+	  width: 25px;
+	  height: 25px;
+	  background: #4CAF50;
+	  cursor: pointer;
+}
+}
