@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>BT dieu kien re nhanh</title>
+</head>
+<body>
+  
+  <script type="text/javascript">
+  	// Bài 1
+  	function compare(x, y) {
+  		if (typeof x =='number') {
+  			document.write('<h1>'+ x +' là một số</h1>');
+  		} else {
+  			document.write('<h1>'+ x +' không phải là số</h1>');
+  		}
+  		if (typeof y =='number') {
+  			document.write('<h1>'+ y +' là một số</h1>');
+  		} else {
+  			document.write('<h1>'+ y +' không phải là số</h1>');
+  		}
+  		if (typeof x == 'number' && typeof y =='number') {
+  			if (x>y) {
+  				document.write('<h2>'+ x +' là số lớn hơn</h2>');
+  			} else if (x<y) {
+  				document.write('<h2>'+ y +' là số lớn hơn</h2>');
+  			} else {
+  				document.write('<h2>Hai số bằng nhau</h2>');
+  			}
+  		} else {document.write('<h2>Không so sánh được</h2>');}
+  	}
+
+  	// Bài 2
+  	function factorial(n) {
+  		if (Number.isInteger(n) && n>0) {
+  			var x=1;
+  			for (var i=1;i<=n;i++) {
+    			x*=i;
+    		}
+    	}
+  		return x;
+    }
+
+    // Bài 3
+    function fil(arr) {
+    	var newArr = arr.filter(function(x){return (x % 2 == 0);});
+      newArr=newArr.sort(function (a,b){return b-a;})
+      return newArr;
+    }
+
+    // Bài 4
+    function check(obj) {
+    	if (obj.username != '' && obj.username.length <=20) {
+    		if (obj.password.length >=6 && obj.password.length <= 32) {
+    			if (obj.confirm === obj.password) {
+    				alert('Pass');
+    			} else {alert('Fall');}
+    		} else {alert('Fall');}
+    	} else {alert('Fall');}
+    }
+
+    // Bài 5
+    function bai5(arr) {
+
+      function reve(str) {
+        var x=str.length, newStr='';
+        for (var i=1; i<=x; i++) {
+          newStr= newStr + str.charAt(x-i);
+        }
+        return newStr;
+      }
+
+      var newArr=[], newArr2=[];
+
+      for (var i=0; i<arr.length; i++) {
+        newArr.push(reve(arr[i]));
+      }
+
+      newArr=newArr.sort();
+
+      for (var i=0; i<newArr.length; i++) {
+        newArr2.push(reve(newArr[i]));
+      }
+      
+      return newArr2;
+    }
+ 
+
+    // Phần 2
+
+    // Bài 1
+    function nowDate() {
+    	var now= new Date();
+    	document.write('<h1>Hôm nay là ngày '+ now.getDate() + ' tháng ' + (now.getMonth()+1) + ' năm ' + now.getFullYear() + '</h1>');
+    	if ((now.getMonth()+1)>=2 && (now.getMonth()+1)<=3) {
+    		document.write('<h2>Hiện tại đang là mùa Xuân</h2>');
+    	} else if ((now.getMonth()+1)>=4 && (now.getMonth()+1)<=7) {
+    		document.write('<h2>Hiện tại đang là mùa Hè</h2>');
+    	} else if ((now.getMonth()+1)>=8 && (now.getMonth()+1)<=9) {
+    		document.write('<h2>Hiện tại đang là mùa Thu</h2>');
+    	} else {
+    		document.write('<h2>Hiện tại đang là mùa Đông</h2>');
+    	}
+    }
+
+    // Bài 2
+    function tit(str) {
+    	if (typeof str !='string') {
+    		var newStr= str.toString();
+    	} else {var newStr= str;}
+    	if (newStr.length<=10) {
+    		return newStr;
+    	} else {return newStr.slice(0, 10)+'...';}
+    }
+
+    // Bài 3
+    function conver(x) {
+    	if (0<=x && x<=10) {
+    		if (0<=x && x<=3.9) {
+    			document.write('<h1>Điểm F</h1>');
+    		} else if (3.9<x && x<=5.4) {
+    			document.write('<h1>Điểm D</h1>');
+    		} else if (5.4<x && x<=6.9) {
+    			document.write('<h1>Điểm C</h1>')
+    		} else if (6.9<x && x<=8.4) {
+    			document.write('<h1>Điểm B</h1>')
+    		} else {
+    			document.write('<h1>Điểm A</h1>')
+    		}
+    	} else {
+    		document.write('<h1>Nhập điểm không đúng</h1>')
+    	}
+    }
+
+    // Bài 4 mã quốc gia (VI, FR, GE, JP, TH)
+    function translate(x) {
+    	switch (x) {
+    		case (''):
+    		
+    		case ('VI'):
+    		document.write('<h1>Xin chào</h1>');
+    		break;
+    		case ('FR'):
+    		document.write('<h1>Bonjour</h1>');
+    		break;
+    		case ('GE'):
+    		document.write('<h1>Hallo</h1>');
+    		break;
+    		case ('JP'):
+    		document.write('<h1>こんにちは (Konichiwa)</h1>');
+    		break;
+    		case ('TH'):
+    		document.write('<h1>สวัสดี (Sawasdi)</h1>');
+    		break;
+    	}
+    }
+
+    // Bài 5
+    function search(arr) {
+    	for (var i=0; i<arr.length; i++) {
+    		if (arr[i] === true) {
+    			document.write('<h1>true xuất hiện lần đầu tại vị trí thứ '+(i+1)+'</h1>');
+    			break;
+    		}
+    	}
+    }
+
+
+    // BT vẽ hình
+    // Bài 1
+    function printTrigangle(n) {
+      if (Number.isInteger(n) && n>2) {
+        var str='';
+
+        for (var i=1; i<=n; i++) {
+
+          for (var j=1; j<=i; j++) {
+            str+=' * ';
+          }
+
+          str+='<br>';
+        }
+
+        document.write('<h2>'+str+'</h2>');
+
+      } else {document.write('<h2>Nhập tham số không đúng</h2>');}
+    }
+
+    // Bài 2
+    function printEmptyRectangle(a, b) {
+      if (Number.isInteger(a) && Number.isInteger(b) && a>3 && b>=3) {
+        var str='';
+        for (var i=1; i<=b; i++) {
+
+          if (i==1) {
+
+            for (var j=1; j<=a; j++) {
+              str+=' * ';
+            }
+
+            str+='<br>';
+
+
+          } else if (i>1 && i<b) {
+            str+=' * ';
+
+            for (j=1; j<=(a-2); j++) {
+              str+='   ';
+            }
+
+            str+=' * ';
+            str+='<br>';
+          } else {
+
+            for (j=1; j<=a; j++) {
+              str+=' * ';
+            }
+
+            str+='<br>';
+          }
+
+        }
+        document.write('<h2><pre>'+str+'</pre></h2>');
+      } else {
+        document.write('<h2>Nhập tham số không đúng</h2>');
+      }
+    }
+
+    // Bài 3
+    var n=8;
+ function printSpecialTriangle() {
+      if (Number.isInteger(n) && n>1) {
+        var str='';
+        for (var i=1; i<=n; i++) {
+
+          if (i==1) {
+            for (var j=1; j<=(2*n-1); j++) {
+              str+="*";
+            }
+            str+='<br>';
+          }else if (i>1&& i<n){
+            for(j=1;j<=(i-1);j++)
+            str+=" ";
+            for(j=i;j<=(2*n-i);j++){
+             str+="*"; 
+            }
+            str+="<br>";
+          }else{ for(j=1;j<=(n-1);j++){
+            str+=" ";
+          }
+            str+="*";
+          } 
+        }
+        document.write('<h2><pre>'+str+'</pre></h2>');
+
+      } else {document.write("<h2>"+"Nhập tham số không đúng"+"</h2>");}
+    }
+
+    // Bài 4
+    function printX(n) {
+      if (Number.isInteger(n) && n>3 && n%2!=0) {
+        var str='';
+
+        for (var i=0; i<n; i++) {
+
+          for (var j=0; j<n; j++) {
+            if (j==i || j==(n-1-i)) {
+              str+=' * ';
+            } else {
+              str+='   ';
+            }
+          }
+
+          str+='<br>';
+        }
+
+        document.write('<h2><pre>'+str+'</pre></h2>');
+      } else {
+        document.write('<h2>Nhập tham số không đúng</h2>');
+        }
+    }
+
+    // Bài 5
+    function printButterfly(n) {
+      if (Number.isInteger(n) && n>3 && n%2!=0) {
+        var str='';
+
+        for (var i=0; i<((n+1)/2); i++) {
+
+          for (var j=0; j<n; j++) {
+            if (j<=i || j>=(n-1-i)) {
+              str+=' * ';
+            } else {
+              str+='   ';
+            }
+          }
+
+          str+='<br>';
+        }
+
+        /*for (var i=((n-1)/2-1); i>=0; i--) {
+
+          for (var j=0; j<n; j++) {
+            if (j<=i || j>=(n-1-i)) {
+              str+=' * ';
+            } else {
+              str+='   ';
+            }
+          }
+
+          str+='<br>';
+        } */
+
+        for (var i=1; i<=((n-1)/2); i++) {
+
+          for (var j=0; j<n; j++) {
+            if (j<=((n-1)/2-i) || j>=((n-1)/2+i)) {
+              str+=' * ';
+            } else {
+              str+='   ';
+            }
+          }
+
+          str+='<br>';
+        }
+
+        document.write('<h2><pre>'+str+'</pre></h2>');
+      } else {
+        document.write('<h2>Nhập tham số không đúng</h2>');
+      }
+    }
+
+
+    // Bài tập vẽ hình tại lớp
+
+    // Bài 1: Vẽ chữ V chiều cao >=2
+    function printV(n) {
+      if (Number.isInteger(n) && n>=2) {
+        var str='';
+        var m= n*2-1;
+
+        for (var i=0; i<n; i++) {
+
+          for (var j=0; j<m; j++) {
+            if (j==i || j==(m-1-i)) {
+              str+='*';
+            } else {
+              str+=' ';
+            }
+          }
+
+          str+='<br>';
+        }
+
+        document.write('<h2><pre>'+str+'</pre></h2>');
+      } else {
+        document.write('<h2>Nhập tham số không đúng</h2>');
+      }
+    }
+
+    // Bài 2: vẽ chữ N chiều cao >=4
+    function printN(n) {
+      if (Number.isInteger(n) && n>=4) {
+        var str='';
+
+        for (var i=0; i<n; i++) {
+          for (var j=0; j<n; j++) {
+            if (j==0 || j==i || j==(n-1)) {
+              str+='* ';
+            } else {
+              str+='  ';
+            }
+          }
+
+          str+='<br>';
+        }
+
+        document.write('<h2><pre>'+str+'</pre></h2>');
+      } else {
+        document.write('<h2>Nhập tham số không đúng</h2>');
+      }
+    }
+
+     // Bài 3: viết chữ VUONG với chiều cao >=5 và là số lẻ
+    function printMyName(h) {
+      if (Number.isInteger(h) && h>=5 && h%2 !=0) {
+        function printV(n) {
+          var str='';
+          var m= n*2-1;
+
+          for (var i=0; i<n; i++) {
+            for (var j=0; j<m; j++) {
+              if (j==i || j==(m-1-i)) {
+                str+='*';
+              } else {
+                str+=' ';
+              }
+            }
+
+            
+            str+='<br>';
+          }
+          return str;
+        }
+
+        function printU(m) {
+          var str='';
+          for (var i=0; i<m; i++) {
+            if (i==(m-1)) {
+              for (var j=0; j<m; j++) {
+                str+='* ';
+              } 
+            }else {
+                for (var j=0; j<m; j++) {
+                  if (j==0 || j==(m-1)) {
+                    str+='* ';
+                  } else {
+                    str+='  ';
+                  }
+                }
+              }
+            str+='<br>';
+          }
+          return str;
+        }
+
+
+        function printO(k) {
+          var str='';
+          for (var i=0; i<k; i++) {
+            if (i==0 || i==(k-1)) {
+              for (var j=0; j<k; j++) {
+                str+='* ';
+              }
+            } else {
+              for (var j=0; j<k; j++) {
+                if (j==0 || j==(k-1)) {
+                  str+='* ';
+                } else {
+                  str+='  ';
+                }
+              }
+            }
+            str+='<br>';
+          }
+
+          return str;
+          
+        }
+        
+        function printN(x) {
+          var str='';
+
+          for (var i=0; i<x; i++) {
+            for (var j=0; j<x; j++) {
+              if (j==0 || j==i || j==(x-1)) {
+                str+='* ';
+              } else {
+                str+='  ';
+            }
+          }
+
+          str+='<br>';
+        }
+        return str;
+     }
+
+
+      function printG(y) {
+        var str='';
+
+        for (var i=0; i<y; i++) {
+          if (i==0 || i==(y-1)) {
+            for (var j=0; j<y; j++) {
+              str+='* ';
+            }
+          } else if (i==((y-1)/2)) {
+            for (var j=0; j<y; j++) {
+              if (j==0 || j>=((y+1)/2)) {
+                str+='* ';
+              } else {
+                str+='  ';
+              }
+            }
+              
+             
+            } else if (i>0 && i<((y-1)/2)) {
+              for (var j=0; j<y; j++) {
+                if (j==0) {
+                  str+='* ';
+                } else {
+                  str+='  ';
+                }
+              }
+            } else {
+              if (j==0 || j==(y-1)) {
+                str+='* ';
+              } else {
+                for (var j=0; j<y; j++) {
+                  if (j==0 || j==(y-1)) {
+                    str+='* ';
+                  } else {
+                    str+='  ';
+                  }
+                }
+                str+='  ';
+              }
+            }
+            str+='<br>'
+          }
+          return str;
+        }
+            
+        document.write('<div style="margin-right: 10px; display: inline-block"><pre>'+printV(h)+'</pre></div><div style="margin-right: 10px; display: inline-block"><pre>'+printU(h)+'</pre></div><div style=" margin-right: 10px;display: inline-block"><pre>'+printO(h)+'</pre></div><div style=" margin-right: 10px;display: inline-block"><pre>'+printN(h)+'</pre></div><div style=" margin-right: 10px;display: inline-block"><pre>'+printG(h)+'</pre></div>');
+       } else {
+        document.write('<h2>Nhập tham số không đúng</h2>');
+      }
+    }
+  </script>
+</body>
+</html>

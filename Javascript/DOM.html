@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DOM</title>
+<style>
+	H1{
+		text-align:center;
+		font-style: italic;
+		font-size: 25px;
+	}
+	h2{
+		text-align: left;
+		font-style: italic;
+		font-size: 20px;
+		margin-left: 100px;
+	}
+	p{
+		text-align: left;
+		font-style: italic;
+		font-size: 17px;
+		margin-left: 100px;
+	}
+</style>
+</head>
+<body>
+<H1 class="DOM">Lorem ipsum dolor sit amet.</H1>
+	<h2 class="para">Lorem ipsum dolor sit amet, consectetur adipisicing.</h2>
+		<p class="p1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro alias odio vitae, accusantium odit soluta, nesciunt temporibus, voluptatem corrupti doloremque molestias deserunt vel voluptatum eos rem fuga quis magni harum similique. Minima a ea sunt debitis quis placeat culpa quidem vitae mollitia laudantium, earum esse, architecto quam pariatur perspiciatis eum, odio nihil natus illo alias dolores numquam provident optio veritatis modi. Illum qui maiores delectus atque voluptatem dolorum error possimus accusamus voluptates magnam esse cum id nesciunt corrupti tempora dignissimos repellat, libero fugiat aut rem? Enim rem consectetur, odit provident itaque iusto illum corporis aliquam illo molestias voluptas, error! Eum.</p>
+	<h2 class="para">Lorem ipsum dolor sit amet, consectetur adipisicing.</h2>
+		<p class="p2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore voluptates voluptas ut. Quasi dolores corporis, molestiae ipsa pariatur magni sed numquam explicabo vero architecto labore voluptatem, voluptatum, ab, esse? Itaque dolore neque adipisci eius vero magni doloribus voluptatibus consequuntur, ullam accusamus possimus, aut totam. Maxime veritatis nulla perferendis, repellat dignissimos corrupti iste quos tenetur quaerat ducimus? Voluptatibus veniam, debitis pariatur, a provident non ad, modi incidunt in totam deserunt iure, odio sequi quidem? Odio molestias facere quia asperiores assumenda odit vitae sed, commodi error, ea amet nesciunt dolore fugiat praesentium? Nemo nihil a, cumque reprehenderit dolorem! Praesentium ab ullam odio animi illo provident ad quis pariatur quisquam, vitae, rerum, recusandae fuga atque magnam iste dolor qui totam voluptates, in tempore placeat assumenda! Repellat veniam, suscipit consequatur voluptatum facere maiores debitis accusamus vel? Quisquam aliquam reprehenderit, fuga perspiciatis atque laborum dolor quibusdam modi necessitatibus veritatis, eius vitae, quas aperiam nobis unde?</p>
+	<h2 class="para">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h2>
+		<p class="p3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, praesentium. Ut accusantium officia dolores nostrum, deserunt, officiis nulla sed aut nam eveniet doloribus numquam commodi. Quisquam dolore eligendi, repellendus, non quae itaque minus rem rerum odit quis voluptatibus vero omnis, fuga. Et veritatis illum, voluptatum. In nobis non quia eaque assumenda. Totam dicta dolor nihil sunt, cupiditate atque optio eveniet! Autem asperiores earum sunt tempore aliquid corporis laboriosam itaque inventore natus consequuntur labore illo quaerat id illum ad accusantium ut quam, mollitia voluptate quisquam saepe! Laudantium ab, pariatur eligendi ipsum optio, ipsam praesentium, totam iusto incidunt fugit inventore? Porro dignissimos, quaerat laboriosam expedita, omnis modi necessitatibus enim a eos, natus deleniti alias explicabo accusamus officiis esse voluptates. Corporis dolor, harum enim sit, libero mollitia rem rerum assumenda, eveniet provident ea recusandae amet cum ullam explicabo non? Fugiat corrupti culpa tempore corporis, architecto voluptate accusantium illum! Odio molestiae qui beatae, repudiandae maxime consequuntur, laboriosam ipsum non neque sit labore eligendi deleniti quas, architecto quisquam sequi tempore temporibus accusantium distinctio fuga nostrum iure nisi. Odio natus quidem, ab sunt quasi, id voluptatem laboriosam totam mollitia porro deserunt, vel possimus eaque similique doloribus est velit neque at culpa minima. Eos explicabo, doloremque excepturi.</p>
+<script>
+// fuction changeColor
+	let changeColor = function(){
+		let p = document.querySelectorAll("p");
+		p[0].style.color="blue";
+		p[1].style.color="yellow";
+		p[2].style.color="red";
+	}
+//fuction changeBgColor(color)
+	let changeBgColor = function(color){
+		document.body.style.backgroundColor = "color";
+	}
+// fuction copyContent
+	let copyContent = function (){
+		let p = document.querySelectorAll("p");
+		p[1].innertext = p[0].innertext;
+	}
+// fuction changeFontSize = function(x{})
+	let changeFontSize = function(x){
+		let p = document.querySelectorAll("p");
+		if (Number.isInteger(x) && x >=0){
+			for(let i = 0; i<=p.length;i++){
+			p[i].style.fontSize += x +"px";}
+		} else {alert("Input wrong data");}
+	}
+// fuction increaseFontSize
+	let increaseFontSize = function(){
+		let p = document.querySelectorAll("p");
+		for(let i=0; i<=p.length;i++){
+		let a = p[0].style.fontSize.length;
+		let b = Number(a) +1;
+		if(b>5){
+			b=5;
+		p[i].style.fontSize = b +"px";
+		}
+	}
+	}
+// fuction decreaseFontSize
+	let decreaseFontSize = function(){
+		let p = document.querySelectorAll("p");
+		for(let i=0; i<=p.length;i++){
+		let a = p[0].style.fontSize.length;
+		let b = Number(a) -1;
+		if(b<10){
+			b=10;
+		p[i].style.fontSize = b +"px";
+		}
+	}
+	}
+</script>
+	
+</body>
+</html>
