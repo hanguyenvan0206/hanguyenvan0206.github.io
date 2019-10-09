@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<h1 id = "game"> MemoryCards Game</h1>
+		<div id = "dialog">
+			<h2> Choose the lever</h2>
+			<button id = "Hard">Hard</button>
+			<button id = "Normal">Nomal</button>
+			<button id = "Easy">Easy</button>
+		</div>
+		<div id = "dialogwin">
+			<h2> You are win</h2>
+			<p>Play again with other lever?</p>
+			<button id = "playback1">PlayBack</button>
+		</div>
+		<div id = "dialoglose">
+			<h2> You are lose</h2>
+			<button id = "playback2">PlayBack</button>
+		</div>
+			<div class="wrap">
+				<div class="timer">
+        			<div id="myProgress">
+           				<div id="myBar"></div>
+        			</div>
+    			</div>
+			<div class="content">
+				<div class="grid"></div>
+			</div>
+		</div>
+		<div id= "snow"></div>
+					<div id = "audio">
+						<audio id="normal">
+					    	<source src="audio/normal.mp3" type="audio/mpeg">
+						</audio>
+						<audio id="win">
+					    	<source src="audio/win.mp3" type="audio/mpeg">
+						</audio>
+						<audio id="lose">
+					    	<source src="audio/lose.mp3" type="audio/mpeg">
+						</audio>
+						<audio id="correct">
+					   		<source src="audio/correct.mp3" type="audio/mpeg">
+						</audio>
+						<audio id="incorrect">
+					    	<source src="audio/incorrect.mp3" type="audio/mpeg">
+						</audio>
+						<audio id="10s">
+					    	<source src="audio/10s.mp3" type="audio/mpeg">
+						</audio>
+						<audio id="5s">
+					    	<source src="audio/5s.mp3" type="audio/mpeg">
+						</audio>				
+					</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
