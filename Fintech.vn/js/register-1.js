@@ -78,3 +78,83 @@ for(let i=0; i<list.length; i++){
 		$('.regitered').css('display', 'none');
 		}
 }
+//***page-register-4***//
+//set choose day/month/year
+for(let i = 1; i<=31; i++){
+	if(i<=9){$('.day').append(`<option>0${i}</option>`)}else{$('.day').append(`<option>${i}</option>`)}
+}
+for(let i=1; i<=12; i++){
+	$('.month').append(`<option>Tháng ${i}</option>`)
+}
+for(let i = 2019; i>=1945; i--){
+	$('.year').append(`<option>${i}</option>`)
+}
+//set choose place of issue identification
+let array = ['An Giang', 'Vũng Tàu', 'Bắc Giang', 'Bắc Kạn', 'Bạc Liêu', 'Bắc Ninh', 'Bến Tre', 'Bình Định','Bình Dương','Bình Phước', 'Bình Thuận', 'Cà Mau', 'Cao Bằng', 'Đắk Lắk', 'Đắk Nông','Điện Biên','Đồng Nai', 'Đồng Tháp', 'Gia Lai', 'Hà Giang'];
+array.map(function(item){
+	$('.place').append(`<option>Công an ${item}</option>`)
+})
+//set choose address
+array.map(function(item){
+	$('.address').append(`<option>${item}</option>`)
+})
+// set menutogg
+for(let i = 0; i<=$('.menutogg').length; i++){
+	$('.menutogg').click(function(){
+		$(this).parent('.row').children('.menutogg').removeClass('active');
+		$(this).addClass('active');
+	})
+}
+//set detail function
+$('.identifytogg').click(function(){
+	$('.identify-detail').css('display', 'block');
+	$('.pesonal-detail').css('display', 'none');
+	$('.job-detail').css('display', 'none');
+});
+$('.pesonaltogg').click(function(){
+	$('.identify-detail').css('display', 'none');
+	$('.pesonal-detail').css('display', 'block');
+	$('.job-detail').css('display', 'none');
+});
+$('.jobtogg').click(function(){
+	$('.identify-detail').css('display', 'none');
+	$('.pesonal-detail').css('display', 'none');
+	$('.job-detail').css('display', 'block');
+});
+// set register-menu
+for(let i = 0; i<=$('.registertogg').length; i++){
+	$('.registertogg').click(function(){
+		$(this).parent('.register-menu').children('.registertogg').removeClass('active');
+		$(this).addClass('active');
+	})
+}
+$('.my-information').click(function(){
+	$('.myInformation-container').css('display', 'block');
+	$('.my-loan-container').css('display', 'none');
+	$('.my-loan-container2').css('display', 'none');
+});
+$('.my-loan').click(function(){
+	$('.myInformation-container').css('display', 'none');
+	$('.my-loan-container').css('display', 'block');
+	$('.my-loan-container2').css('display', 'none');
+});
+// set borrow-register
+	let m = $('.total-borrows').val();
+	let t = $('.time-borrows').val();
+$('.total-bor').html($('.total-borrows').val());
+$('.total-borrows').on('change', function(){
+	$('.total-bor').html(`${m} VND`);
+})
+$('.time-borrows').on('change', function(){
+	$('.time-bor').html(`${t} Tháng`);
+})
+$('.promotion-code').html($('.promotions').val());
+$('.promotions').on('change', function(){
+	$('.promotion-code').html($('.promotions').val());
+})
+//confirm-borrow
+
+$('.confirm-borrow').click(function(){
+	$('.my-loan-container2').css('display', 'block');
+	$('.my-loan-container').css('display', 'none');
+})

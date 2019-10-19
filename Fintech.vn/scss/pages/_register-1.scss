@@ -78,13 +78,13 @@
 						}
 						.phone-confirm{
 							background-color: #eaeaea;
-							padding: 1.5rem 1rem 1.5rem 1rem;
+							padding: 1.5rem 1rem 1.5rem 2rem;
 							font-size: 1.7rem;
 							font-weight: 550;
-							max-width: 50%;
+							max-width: 90%;
 							border-radius: 4px;
 							color: $color-secondly;
-							@extend %flex-mid;
+							@extend %flex-start;
 							
 						}
 					}

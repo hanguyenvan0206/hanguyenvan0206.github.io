@@ -78,13 +78,13 @@
 						}
 						.email-confirm, .name-confirm, .phone-confirm{
 							background-color: #eaeaea;
-							padding: 1.3rem 0.5rem 1.3rem 0;
+							padding: 1.3rem 0.5rem 1.3rem 2rem;
 							font-size: 1.7rem;
 							font-weight: 550;
-							max-width: 50%;
+							max-width: 90%;
 							border-radius: 4px;
 							color: $color-secondly;
-							@extend %flex-mid;
+							@extend %flex-start;
 							
 						}
 					}

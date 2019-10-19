@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Fintech.vn</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/ico" href="#">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<link rel="stylesheet" type="text/css" href="css/slick.css">
+	<link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Charm:700|Dancing+Script:700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Monoton&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/v4-shims.css">
+</head>
+<body>
+	<header>
+		<navbar>		
+		</navbar>
+		<div class="top-borrowBtn"></div>
+	</header>
+	<section>
+		<div class="page">
+			<div class="page-container">
+				<a href="index.html">Trang chủ</a> <i class="fas fa-angle-right"></i> Mạng lưới
+			</div>
+		</div>
+		<div class="Fintech-branch">
+			<div class="Fintech-branch-container">
+				<div class="row">
+					<div class="col-12 col-sm-12 col-md-4 Fintechcol1">
+						<div class="borrow-sidebar">
+							<div class="borrow-sidebar-title">
+								<h3>Vay chỉ trong 30 phút</h3>
+								<h4>Thời gian nhận tiền: <span id = 'time-recieve'></span></h4>
+							</div>
+							<div class="borrow-sidebar-containner">
+								<div class="borrow-sidebar-bar">
+									<div class="borrow-bar-money">
+										<div class="money-mount">
+											<h4>Số tiền:</h4>
+											<h4 id = 'money-mount'></h4></div>
+										<div class="slide-money">
+			  								<input type="range" min="1" max="20" value="5" step="1" class="slider" id="myRange">
+										</div>
+										<div class="max-borrow"><p>Đến 20 Triệu đồng</p></div>
+									</div>
+									<div class="borrow-bar-time">
+										<div class="time-borrow">
+											<h4>Thời gian:</h4>
+											<h4 id = 'time-borrow'></h4></div>
+										<div class="slide-time">
+			  								<input type="range" min="1" max="12" value="2" step="1" class="slider" id="myRange-time">
+										</div>
+										<div class="max-time-borrow"><p>Đến 12 Tháng</p></div>		
+									</div>
+								</div>
+								<div class="loan-information">
+									<h4>Thông tin khoản vay:</h4>
+									<div class="loan-information-content">
+										<table>
+										  <tr>
+										    <th>Tiền Vay:</th>
+										    <td class = 'total-borrow'></td>
+										  </tr>
+										  <tr>
+										    <th>Lãi suất:</th>
+										    <td class = 'total-interest'></td>
+										  </tr>
+										  <tr>
+										    <th>Tổng:</th>
+										    <td class = 'total-payment'></td>
+										  </tr>
+										  <tr>
+										    <th>Đến hạn:</th>
+										    <td class = 'time-maturity'></td>
+										  </tr>
+										</table>
+									</div>
+									<div class="loan-btn"><button class = "borrow-btn"><a>Đăng ký Vay</a></button></div>
+								</div>
+							</div>
+						</div>
+						<div class="branch-menu">
+							<div class="form-group">
+								<div class="intruction">
+									<h5>Chọn địa chỉ gần bạn nhất</h5>
+								</div>
+								<div class=" col-md-12">
+										<select  class="form-control branch-select">
+											 <option class="selection" selected>Trụ sở chính</option>
+										</select>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-12 col-sm-12 col-md-8 Fintechcol2">
+						<div class="branch-address">
+							<h4>Địa chỉ trụ sở chính: 100, Trần Hưng Đạo, Hoàn Kiếm, Hà Nội - Số điện thoại: 043 69875432 - Fax: 043 69875430/043 69875435 - hotline: 19008198</h4>
+						</div>
+						<div class="branch-content">
+							<div class="branch-content-title">
+								<h4><span>Vay Tiền Nhanh Fintech</span> - Bạn đang sống tại Hà Nội? Bạn cần tiền xoay sở? Bạn muốn vay tiền nhanh tại Hà Nội nhưng không biết nên vay ở đâu? Vì trên thị trường hiện nay xuất hiện nhan nhản các dịch vụ cho vay tiền nhanh ngắn hạn. Tuy nhiên, với mức lãi suất của nhiều nơi không phải dễ dàng để mọi người có thể chấp nhận vay tiền!</h4>
+								<h4>Vậy phải làm sao đây? Fintech sẽ giúp bạn vay tiền online nhanh cùng với mức lãi suất thấp và thật nhiều ưu đãi. Tất cả sẽ có trong bài viết bên dưới!</h4>
+							</div>
+							<div class="branch-content-decs">
+								<h3>1. Có nên chọn hình thức vay tiền nhanh tại Hà Nội?</h3>
+								<img src="img/branch-1.jpg" alt="">
+								<h4>Nếu bạn chỉ muốn vay tiền để phục vụ cho nhu cầu không chính đáng của cá nhân như: cờ bạc, phục vụ các thú vui xa xỉ… thì không nên chọn vay tiền nhanh tại Hà Nội nhé!</h4>
+								<h4>Thế nhưng nếu bạn đang trong trường hợp cấp bách không thể mượn được ai như: tiền sinh hoạt hàng ngày bị thiếu, đang du lịch nhưng lại chi ngoài kế hoạch, chi trả viện phí, cần tiền gấp để kinh doanh, chi trả phẫu thuật,… thì nên cân nhắc đến việc vay nhanh để tạm thời giải quyết những vấn đề này.</h4>
+							</div>
+							<div class="branch-content-decs">
+								<h3>2. Vì sao bạn nên chọn Fintech để vay tiêu dùng tại Hà Nội?</h3>
+								<img src="img/branch-1.1.jpg" alt="">
+								<h4>Chắc bạn đang thắc mắc tại sao không chọn nơi khác để vay tiền nhanh tại Hà Nội mà lại chọn Fintech đúng không?</h4>
+								<h4>Rất đơn giản! Bởi vì không một nơi vay tiền trả góp tại Hà Nội nào lại có nhiều ưu điểm như ở Fintech, cụ thể là:</h4>
+								<h4>- Việc vay tiền được thực hiện hoàn toàn online, bạn chỉ cần ngồi tại nhà vào trang chủ của Fintech đăng ký thông tin mà không cần đến trực tiếp trụ sở của công ty để đăng kí như khi vay ngân hàng khác.</h4>
+								<h4>- Khi vay tiền nhanh tại Hà Nội ở các nơi khác bạn phải nộp sổ hộ khẩu, chứng minh thu nhập cá nhân, tình trạng hôn nhân,… rất rườm rà. Còn tại OnCredit, bạn không cần các thủ tục rắc rối trên mà chỉ cần:</h4>
+								<h4>+ Bạn đủ 18 - 60 và đủ trách nhiệm khả năng chịu trách nhiệm trước pháp luật.</h4>
+								<h4>+ Cung cấp chứng minh nhân dân rõ hình ảnh, rõ chữ số.</h4>
+								<h4>Tất cả chỉ có thế và bạn đã có đủ điều kiện để vay từ 500.000 – 10.000.000 đồng.</h4>
+								<h4>- Thời gian vay tối đa là 30 ngày với lãi xuất thấp hơn gấp 1,5 lần những nơi vay tiền nhanh tại Hà Nội khác. Ngoài ra, bạn có thể gia hạn khoản vay, đặc biệt khi vay lần đầu tiên, mức lãi suất là 0%.</h4>
+								<h4>- Chỉ mất vài chục phút để duyệt và giải ngân tiền sẽ “rót” vào tài khoản của bạn. Bạn sẽ không cần phải chờ đợi mòn mỏi như khi vay nhiều nơi khác.</h4>
+								<h4>- Thông tin của bạn được chúng tôi bảo mật cực cao và việc thanh toán rất linh hoạt khi đến kỳ hạn.</h4>
+							</div>
+							<div class="branch-content-decs">
+								<h3>3. Hãy đặt niềm tin vào Fintech khi vay tiền trả góp tại Hà Nội!</h3>
+								<img src="img/branch-1.2.jpg" alt="">
+								<h4>Fintech cam đoan rằng việc vay tiền của bạn sẽ đơn giản như trên và được tính đúng mức lãi suất đưa ra. Hãy yên tâm là sẽ không mất thêm một khoản phí “oan uổng” nào cả.</h4>
+								<h4>Với những ưu điểm từ đăng ký vay đến khâu thanh toán cùng với sự phục vụ, hỗ trợ nhiệt tình của nhân viên nơi đây sẽ khiến bạn hài lòng. OnCredit luôn đặt niềm tin và sự hài lòng của bạn lên hàng đầu, tất cả đều vì quyền lợi khách hàng mà thực hiện.</h4>
+							</div>
+							<div class="branch-content-decs">
+								<h3>4. Lời kết</h3>
+								<h4>Hi vọng với những thông tin được cung cấp trên, bạn sẽ hoàn toàn tin tưởng và chọn Fintech là nơi vay tiền nhanh tại Hà Nội khi bạn cần. Hãy yên tâm vì Fintech sẽ luôn có những chương trình ưu đãi và hỗ trợ khi bạn cần. Khi bạn cần vay tiền nhanh - Hãy nghĩ ngay đến Fintech!</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+<footer>
+	
+</footer>
+    <div id="myModal"></div>
+	<script src="js/skrollr.min.js"></script>
+	<script
+  	src="https://code.jquery.com/jquery-3.4.1.js"
+ 	integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  	crossorigin="anonymous"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="js/slick.min.js"></script>	
+	<script type="text/javascript" src="js/script_header_footer.js"></script>
+	<script type="text/javascript" src="js/skrollr.js"></script>
+	<script type="text/javascript" src="js/carousel.js"></script>
+	<script type="text/javascript" src="js/loginStatus.js"></script>
+	<script type="text/javascript" src="js/home.js"></script>
+	<script>
+		let array = ['An Giang', 'Vũng Tàu', 'Bắc Giang', 'Bắc Kạn', 'Bạc Liêu', 'Bắc Ninh', 'Bến Tre', 'Bình Định','Bình Dương','Bình Phước', 'Bình Thuận', 'Cà Mau', 'Cao Bằng', 'Đắk Lắk', 'Đắk Nông','Điện Biên','Đồng Nai', 'Đồng Tháp', 'Gia Lai', 'Hà Giang', 'Nghệ An'];
+		array.map(function(item){
+		$('.branch-select').append(`<option class="selection">Vay nhanh tại ${item}</option>`);
+	})
+		for(let i =0; i <= array.length; i++){
+			$('.branch-select').on('change', function(){
+			$('.branch-content').css('display','none');
+			$('.selection').parent('.branch-select').children('.selection').removeClass('.selected');
+			$(this).addClass('.selected');
+
+			$('.Fintechcol2').append(`
+					<div class="branch-content">
+							<div class="branch-content-title">
+								<h4><span>Vay Tiền Nhanh Fintech</span> - Bạn đang sống tại ${array[0]}? Bạn cần tiền xoay sở? Bạn muốn vay tiền nhanh tại ${array[0]} nhưng không biết nên vay ở đâu? Vì trên thị trường hiện nay xuất hiện nhan nhản các dịch vụ cho vay tiền nhanh ngắn hạn. Tuy nhiên, với mức lãi suất của nhiều nơi không phải dễ dàng để mọi người có thể chấp nhận vay tiền!</h4>
+								<h4>Vậy phải làm sao đây? Fintech sẽ giúp bạn vay tiền online nhanh cùng với mức lãi suất thấp và thật nhiều ưu đãi. Tất cả sẽ có trong bài viết bên dưới!</h4>
+							</div>
+							<div class="branch-content-decs">
+								<h3>1. Có nên chọn hình thức vay tiền nhanh tại ${array[0]}?</h3>
+								<img src="img/branch-2.jpg" alt="">
+								<h4>Nếu bạn chỉ muốn vay tiền để phục vụ cho nhu cầu không chính đáng của cá nhân như: cờ bạc, phục vụ các thú vui xa xỉ… thì không nên chọn vay tiền nhanh tại ${array[0]} nhé!</h4>
+								<h4>Thế nhưng nếu bạn đang trong trường hợp cấp bách không thể mượn được ai như: tiền sinh hoạt hàng ngày bị thiếu, đang du lịch nhưng lại chi ngoài kế hoạch, chi trả viện phí, cần tiền gấp để kinh doanh, chi trả phẫu thuật,… thì nên cân nhắc đến việc vay nhanh để tạm thời giải quyết những vấn đề này.</h4>
+							</div>
+							<div class="branch-content-decs">
+								<h3>2. Vì sao bạn nên chọn Fintech để vay tiêu dùng tại ${array[0]}?</h3>
+								<img src="img/branch-2.1.jpg" alt="">
+								<h4>Chắc bạn đang thắc mắc tại sao không chọn nơi khác để vay tiền nhanh tại ${array[0]} mà lại chọn Fintech đúng không?</h4>
+								<h4>Rất đơn giản! Bởi vì không một nơi vay tiền trả góp tại ${array[0]} nào lại có nhiều ưu điểm như ở Fintech, cụ thể là:</h4>
+								<h4>- Việc vay tiền được thực hiện hoàn toàn online, bạn chỉ cần ngồi tại nhà vào trang chủ của Fintech đăng ký thông tin mà không cần đến trực tiếp trụ sở của công ty để đăng kí như khi vay ngân hàng khác.</h4>
+								<h4>- Khi vay tiền nhanh tại ${array[0]} ở các nơi khác bạn phải nộp sổ hộ khẩu, chứng minh thu nhập cá nhân, tình trạng hôn nhân,… rất rườm rà. Còn tại OnCredit, bạn không cần các thủ tục rắc rối trên mà chỉ cần:</h4>
+								<h4>+ Bạn đủ 18 - 60 và đủ trách nhiệm khả năng chịu trách nhiệm trước pháp luật.</h4>
+								<h4>+ Cung cấp chứng minh nhân dân rõ hình ảnh, rõ chữ số.</h4>
+								<h4>Tất cả chỉ có thế và bạn đã có đủ điều kiện để vay từ 500.000 – 10.000.000 đồng.</h4>
+								<h4>- Thời gian vay tối đa là 30 ngày với lãi xuất thấp hơn gấp 1,5 lần những nơi vay tiền nhanh tại Hà Nội khác. Ngoài ra, bạn có thể gia hạn khoản vay, đặc biệt khi vay lần đầu tiên, mức lãi suất là 0%.</h4>
+								<h4>- Chỉ mất vài chục phút để duyệt và giải ngân tiền sẽ “rót” vào tài khoản của bạn. Bạn sẽ không cần phải chờ đợi mòn mỏi như khi vay nhiều nơi khác.</h4>
+								<h4>- Thông tin của bạn được chúng tôi bảo mật cực cao và việc thanh toán rất linh hoạt khi đến kỳ hạn.</h4>
+							</div>
+							<div class="branch-content-decs">
+								<h3>3. Hãy đặt niềm tin vào Fintech khi vay tiền trả góp tại ${array[0]}!</h3>
+								<img src="img/branch-2.2.jpg" alt="">
+								<h4>Fintech cam đoan rằng việc vay tiền của bạn sẽ đơn giản như trên và được tính đúng mức lãi suất đưa ra. Hãy yên tâm là sẽ không mất thêm một khoản phí “oan uổng” nào cả.</h4>
+								<h4>Với những ưu điểm từ đăng ký vay đến khâu thanh toán cùng với sự phục vụ, hỗ trợ nhiệt tình của nhân viên nơi đây sẽ khiến bạn hài lòng. OnCredit luôn đặt niềm tin và sự hài lòng của bạn lên hàng đầu, tất cả đều vì quyền lợi khách hàng mà thực hiện.</h4>
+							</div>
+							<div class="branch-content-decs">
+								<h3>4. Lời kết</h3>
+								<h4>Hi vọng với những thông tin được cung cấp trên, bạn sẽ hoàn toàn tin tưởng và chọn Fintech là nơi vay tiền nhanh tại Hà Nội khi bạn cần. Hãy yên tâm vì Fintech sẽ luôn có những chương trình ưu đãi và hỗ trợ khi bạn cần. Khi bạn cần vay tiền nhanh - Hãy nghĩ ngay đến Fintech!</h4>
+							</div>
+						</div>
+				`)
+
+		})
+		}
+	</script>
+</body>
+</html>

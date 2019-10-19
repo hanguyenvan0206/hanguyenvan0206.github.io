@@ -87,3 +87,16 @@ $('.login-Confirm').click(function(){
 	}
 	return isValid;
 	});
+//borrow-btn
+
+for(let i=0; i<list.length; i++){
+		if(list[i].status == `login`){
+		$('.borrow-btn').click(function(){
+			window.location.assign("register-4.html")
+		})	
+		}else{
+		$('.borrow-btn').click(function(){
+			window.location.assign("register.html")
+		})
+		}
+}

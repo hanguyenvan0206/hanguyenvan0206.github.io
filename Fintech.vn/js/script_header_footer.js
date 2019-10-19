@@ -9,12 +9,12 @@ let navbar = `<div class="navbar1">
 							<div class="regitered">
 								<div class="btn-group">
 								  <div  class="btn btn-secondary dropdown-toggle greeting" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-								    Xin chào: Nguyễn Văn Hà
+								    
 								  </div >
 								  <div class="dropdown-menu dropdown-menu-right">
-								    <button class="dropdown-item" type="button">Thông tin đăng ký</button>
-								    <button class="dropdown-item" type="button">Cập nhập thông tin cá nhân</button>
-								    <button class="dropdown-item" type="button">Bảo mật tài khoản</button>
+								    <button class="dropdown-item register-infor" type="button">Thông tin đăng ký</button>
+								   <button class="dropdown-item loan-infor" type="button">Lịch sử tín dụng</button>
+								    <button class="dropdown-item secure-account" type="button">Bảo mật tài khoản</button>
 								    <button class="dropdown-item logout" id = "logout" type="button">Đăng xuất</button>
 								  </div>
 								</div>
@@ -42,7 +42,7 @@ let navbar = `<div class="navbar1">
 								         <a>Thủ tục</a>
 								        </div>
 								        <div class="dropdown-menu" id= "dropdown-menu0" aria-labelledby="navbarDropdown">
-								          <a class="dropdown-item" href="#">Thủ Tục Vay Vốn</a>
+								          <a class="dropdown-item" href="borrow.html">Thủ Tục Vay Vốn</a>
 								          <a class="dropdown-item" href="payment.html">Hướng dẫn thanh toán</a>
 								          <a class="dropdown-item" href="question.html">Câu hỏi thường gặp</a>
 								        </div>
@@ -62,10 +62,10 @@ let navbar = `<div class="navbar1">
 								        <a class="nav-link" href="share.html">Chia sẻ</a>
 								      </li>
 								      <li class="nav-item active">
-								        <a class="nav-link" href="#">Tuyển dụng</a>
+								        <a class="nav-link" href="recruiter.html">Tuyển dụng</a>
 								      </li>
 								       <li class="nav-item active">
-								        <a class="nav-link" href="#">Mạng lưới</a>
+								        <a class="nav-link" href="branch.html">Mạng lưới</a>
 								      </li>
 								    </ul>
 								    <div class="search-field">
@@ -89,9 +89,9 @@ let navbar = `<div class="navbar1">
 									  </div >
 									  <div class="dropdown-menu dropdown-menu-right">
 									  	<div class="dropdown-item greeting"></div>
-									    <button class="dropdown-item" type="button">Thông tin đăng ký</button>
-									    <button class="dropdown-item" type="button">Cập nhập thông tin cá nhân</button>
-									    <button class="dropdown-item" type="button">Bảo mật tài khoản</button>
+									    <button class="dropdown-item register-infor" type="button">Thông tin đăng ký</button>
+									    <button class="dropdown-item loan-infor" type="button">Lịch sử tín dụng</button>
+									    <button class="dropdown-item secure-account" type="button">Bảo mật tài khoản</button>
 									    <button class="dropdown-item logout" id = "logout" type="button">Đăng xuất</button>
 									  </div>
 									</div>
@@ -127,14 +127,14 @@ let navbar = `<div class="navbar1">
 									        <a class="nav-link" href="index.html">Trang chủ<span class="sr-only">(current)</span></a>
 									      </li>
 									      <li class="nav-item active">
-									        <a class="nav-link" href="about">Giới Thiệu <span class="sr-only">(current)</span></a>
+									        <a class="nav-link" href="about.html">Giới Thiệu <span class="sr-only">(current)</span></a>
 									      </li>
 									      <li class="nav-item dropdown">
 									         <div class="nav-link dropdown-toggle navbarDropdown" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 									         <a>Thủ tục</a>
 									        </div>
 									        <div class="dropdown-menu" id= "dropdown-menu0" aria-labelledby="navbarDropdown">
-									          <a class="dropdown-item" href="#">Thủ Tục Vay Vốn</a>
+									          <a class="dropdown-item" href="borrow.html">Thủ Tục Vay Vốn</a>
 									          <a class="dropdown-item" href="payment.html">Hướng dẫn thanh toán</a>
 									          <a class="dropdown-item" href="question.html">Câu hỏi thường gặp</a>
 									        </div>
@@ -153,10 +153,10 @@ let navbar = `<div class="navbar1">
 									        <a class="nav-link" href="share.html">Chia sẻ</a>
 									      </li>
 									      <li class="nav-item active">
-									        <a class="nav-link" href="#">Tuyển dụng</a>
+									        <a class="nav-link" href="recruiter.html">Tuyển dụng</a>
 									      </li>
 									       <li class="nav-item active">
-									        <a class="nav-link" href="#">Mạng lưới</a>
+									        <a class="nav-link" href="branch.html">Mạng lưới</a>
 									      </li>
 									    </ul>
 									  </div>
@@ -169,7 +169,7 @@ let topborrowBtn = `<div class="totopBtn"><i class="fas fa-arrow-circle-up"></i>
 						<div class="borrowBtn-circle1">
 							<div class="borrowBtn-circle2">
 								<div class="borrowBtn-circle3">
-								<a href="#">Cách nhận vay tiền</a>
+								<a href="question.html">Cách nhận vay tiền</a>
 								</div>
 							</div>
 						</div>
@@ -219,7 +219,7 @@ let footer = `<footer data-300-center-top="transform: scale(0.8); opacity: 0" da
 		        	<div class="row">
 		        		<div class="col-12 col-sm-12 col-md-4 row1">
 		        			<div class="footer-logo">
-		        				<a href="#">FinTech.<span>vn</span></a>
+		        				<a>FinTech.<span>vn</span></a>
 								<p> Chia sẻ giá trị cuộc sống</p>
 		        			</div>
 		        		</div>
@@ -243,16 +243,16 @@ let footer = `<footer data-300-center-top="transform: scale(0.8); opacity: 0" da
 		        				<h3>Kết Nối</h3>
 								</div>
 								<div class="footer-link-item">
-		        				<a href="#"><i class="fab fa-facebook-f"></i></a>
-		        				<a href="#"><i class="fab fa-instagram"></i></a>
-		        				<a href="#"><i class="fab fa-twitter"></i></a>
-		        				<a href="#"><i class="fab fa-youtube"></i></a>
+		        				<a href="#/"><i class="fab fa-facebook-f"></i></a>
+		        				<a href="#/"><i class="fab fa-instagram"></i></a>
+		        				<a href="#/"><i class="fab fa-twitter"></i></a>
+		        				<a href="#/"><i class="fab fa-youtube"></i></a>
 		        				</div>
 		        			</div>	
 		        		</div>	
 		        	</div>
 		        	<div class="design-copyright">
-		        		<p>Designed & Developed by <a href="#">FinTech.<span>vn</span></a></p>
+		        		<p>Designed & Developed by <a>Ha<span>nguyen</span></a></p>
 		       		</div>  	
 		        </div>
 		    </footer>`
@@ -458,9 +458,16 @@ $('.loginBtn').click(function(){
 	$('.verify-key').html(`${listKey[x]}${listKey[0]}${listKey[5]}${listKey[9]}${listKey[3]}`);
 	//compare verify-key and data-input
 })
-
-
-
+//
+$('.register-infor').click(function(){
+	window.location.assign("register-4.html")
+})
+$('.secure-account').click(function(){
+	window.location.assign("register-4.html")
+})
+$('.loan-infor').click(function(){
+	window.location.assign("register-4.html")
+})
 
 
 

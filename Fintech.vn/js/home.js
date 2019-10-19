@@ -20,38 +20,54 @@ $(document).ready(function(){
 let loadMoney = function(){
 $('#money-mount').html($('#myRange').val() +`.000.000 VND`);
 $('.total-borrow').html($('#myRange').val() +`.000.000 VND`);
+$('.total-borrows').val($('#myRange').val() +`.000.000 VND`);
+$('.total-bor').html($('#myRange').val() +`.000.000 VND`);
 $('#myRange').on('change', function(){
 	$('#money-mount').html($('#myRange').val() +`.000.000 VND`);
 	$('.total-borrow').html($('#myRange').val() +`.000.000 VND`);
+	$('.total-borrows').val($('#myRange').val() +`.000.000 VND`);
+	$('.total-bor').html($('#myRange').val() +`.000.000 VND`);
 	});
 	};
 // Input thời gian
 let loadTime =function(){
 $('#time-borrow').html($('#myRange-time').val() +` Tháng`);
+$('.time-borrows').val($('#myRange-time').val() +` Tháng`);
+$('.time-bor').html($('#myRange-time').val() +` Tháng`);
 $('#myRange-time').on('change', function(){
 	$('#time-borrow').html($('#myRange-time').val() +` Tháng`);
+	$('.time-borrows').val($('#myRange-time').val() +` Tháng`);
+	$('.time-bor').html($('#myRange-time').val() +` Tháng`);
 	});
 	};
 // Tính lãi suất và tổng nợ
 let calculation = function(){
 		let m = $('#myRange').val();
 		let t = $('#myRange-time').val();
-		$('.total-interest').html(`${(m*0.01*t*1000)}.000 VND`); //giả sử LS tạm tính 12%/năm
+		$('.total-interest').html(`${(m*0.01*t*1000)}.000 VND`);
+		$('.paid-interest').html(`${(m*0.01*t*1000)}.000 VND`); //giả sử LS tạm tính 12%/năm
 		$('.total-payment').html(`5.100.000 VND`);
+		$('.paid-total').html(`5.100.000 VND`);
 	$('#myRange').on('change', function(){
 		let m = $('#myRange').val();
 		let t = $('#myRange-time').val();
 		let r = (m*0.01*t*1000).toFixed(0);
 		if(r<1000){
 			$('.total-interest').html(`${r}.000 VND`);
+			$('.paid-interest').html(`${r}.000 VND`);
 			let total = (Number(r/1000) + Number(m));
 			if(m<10){
 				$('.total-payment').html(`${total.toPrecision(4)}.000 VND`);
-			}else{$('.total-payment').html(`${total.toPrecision(5)}.000 VND`);};
+				$('.paid-total').html(`${total.toPrecision(4)}.000 VND`);
+			}else{$('.total-payment').html(`${total.toPrecision(5)}.000 VND`);
+				$('.paid-total').html(`${total.toPrecision(5)}.000 VND`);
+		};
 		}else{
 			$('.total-interest').html(`${(r/1000).toPrecision(3)}0.000 VND`);
+			$('.paid-interest').html(`${(r/1000).toPrecision(3)}0.000 VND`);
 			let total = (Number(r/1000) + Number(m));
 			$('.total-payment').html(`${total.toPrecision(4)}0.000 VND`);
+			$('.paid-total').html(`${total.toPrecision(4)}0.000 VND`);
 		}
 	});
 	$('#myRange-time').on('change', function(){
@@ -60,14 +76,20 @@ let calculation = function(){
 			let r = (m*0.01*t*1000).toFixed(0);
 		if(r<1000){
 				$('.total-interest').html(`${r}.000 VND`);
+				$('.paid-interest').html(`${r}.000 VND`);
 				let total = (Number(r/1000) + Number(m));
 				if(m<10){
 				$('.total-payment').html(`${total.toPrecision(4)}.000 VND`);
-			}else{$('.total-payment').html(`${total.toPrecision(5)}.000 VND`);};
+				$('.paid-total').html(`${total.toPrecision(4)}.000 VND`);
+			}else{$('.total-payment').html(`${total.toPrecision(5)}.000 VND`);
+			$('.paid-total').html(`${total.toPrecision(5)}.000 VND`);
+		};
 		}else{
 			$('.total-interest').html(`${(r/1000).toPrecision(3)}0.000 VND`);
+			$('.paid-interest').html(`${(r/1000).toPrecision(3)}0.000 VND`);
 			let total = (Number(r/1000) + Number(m));
 			$('.total-payment').html(`${total.toPrecision(4)}0.000 VND`);
+			$('.paid-total').html(`${total.toPrecision(4)}0.000 VND`);
 		}
 	});
 };
@@ -83,22 +105,31 @@ let maturity = function(){
 	let timeborrow = Number(month) + Number(t);
 	if(timeborrow<=12){
 			$('.time-maturity').html(`${date}/${timeborrow}/${year}`);
+			$('.paid-time').html(`${date}/${timeborrow}/${year}`);
 		}else{
 			if((timeborrow-12)<10){
-				$('.time-maturity').html(`${date}/0${timeborrow-12}/${year+1}`);}else{
+				$('.time-maturity').html(`${date}/0${timeborrow-12}/${year+1}`);
+				$('.paid-time').html(`${date}/0${timeborrow-12}/${year+1}`);
+			}else{
 					$('.time-maturity').html(`${date}/${timeborrow-12}/${year+1}`);
+					$('.paid-time').html(`${date}/${timeborrow-12}/${year+1}`);
 				}; 
 			};
 	$('.time-maturity').html(`${date}/${timeborrow}/${year}`);
+	$('.paid-time').html(`${date}/${timeborrow}/${year}`);
 	$('#myRange-time').on('change', function(){
 		let t = $('#myRange-time').val();
 		let timeborrow = Number(month) + Number(t);
 		if(timeborrow<=12){
 			$('.time-maturity').html(`${date}/${timeborrow}/${year}`);
+			$('.paid-time').html(`${date}/${timeborrow}/${year}`);
 		}else{
 			if((timeborrow-12)<10){
-				$('.time-maturity').html(`${date}/0${timeborrow-12}/${year+1}`);}else{
+				$('.time-maturity').html(`${date}/0${timeborrow-12}/${year+1}`);
+				$('.paid-time').html(`${date}/0${timeborrow-12}/${year+1}`);
+			}else{
 					$('.time-maturity').html(`${date}/${timeborrow-12}/${year+1}`);
+					$('.paid-time').html(`${date}/${timeborrow-12}/${year+1}`);
 				} 
 			}
 	});
