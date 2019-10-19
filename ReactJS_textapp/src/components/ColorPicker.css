@@ -1,0 +1,24 @@
+.Trafficlight .light{
+    width: 70px;
+    height: 70px;
+    display: inline-block;
+    border-radius: 50%;
+    margin: 10px;
+    opacity: 0.2;
+}
+.Trafficlight{
+    display: flex;
+    flex-direction: column;
+}
+.Trafficlight .active{
+    opacity: 1;
+}
+.Trafficlight .Red{
+    background-color: red;
+}
+.Trafficlight .Orange{
+    background-color: orange;
+}
+.Trafficlight .Green{
+    background-color: green;
+}
