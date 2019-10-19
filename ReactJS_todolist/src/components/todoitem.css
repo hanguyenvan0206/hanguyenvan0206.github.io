@@ -1,0 +1,18 @@
+.TodoItem{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    font-size: 24px;
+    color: #000000;
+    display: flex;
+    padding: 10px 50px;
+    border-bottom: 1px solid #EEE;
+    cursor: pointer;
+}
+.TodoItem >p {
+    margin: 0;
+    margin-left: 20px;
+}
+.TodoItem-complete{
+    text-decoration: line-through;
+    opacity: 0.3;
+}
