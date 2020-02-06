@@ -1,1 +1,62 @@
 
+//compareSumOfDigits
+function compareSumOfDigits(str) {
+    let a = 0;
+    let b = 0;
+    let arr = [];
+    for (let i = 0; i < str.length; i++) {
+      arr.push(parseInt(str.charAt(i)))
+    };
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i] % 2 == 0) {
+        a += arr[i]
+      } else {
+        b += arr[i]
+      }
+    };
+    return a - b;
+  }
+  //countZeroDigit
+  function countZeroDigit(a,b) {
+    var str = '';
+    for (let i = a; i <= b; i++){
+        str += i;}
+    let length = str.split("0").length;
+    if (length == 0){
+        return 0;
+    }else{
+        return length - 1;
+    }
+  }
+  //isPrime
+  function isPrime(n) {
+    for (var i = 2; i < n; i++) {
+      if (n % i === 0){
+          return false;}
+    }
+    return n > 1;
+  }
+  //isSortedArray
+  function isSortedArray(arr) {
+    let newArr = [];
+    for (let i = 0; i < arr.length - 1; i++) {
+      newArr.push(arr[i] - arr[i + 1])
+    }
+    return newArr.forEach(ele => ele >= 0) || newArr.forEach(ele => ele <= 0)
+  }
+  //lastDigitDiffZero
+  function lastDigitDiffZero(n) {
+    let mul = 1, arr;
+    for (let i = 1; i <= n; i++) {
+      mul *= i
+    }
+    arr = mul.toString().split('').map(Number);
+    console.log(arr)
+    for (let i = arr.length - 1; i >= 0; i--) {
+      if (arr[i] != 0) {
+        return arr[arr.length - 1];
+      } else {
+        arr.pop();
+      }
+    }
+  }
